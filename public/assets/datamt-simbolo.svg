@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="50 50 300 300" width="400" height="400">
   <defs>
     <linearGradient id="textGrad" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0" stop-color="#00F2FE"/><stop offset="1" stop-color="#F355FF"/></linearGradient>
     <radialGradient id="coreGlow" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#00F2FE" stop-opacity="0.25"/><stop offset="1" stop-color="#00F2FE" stop-opacity="0"/></radialGradient>

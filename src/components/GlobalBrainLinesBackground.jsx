@@ -72,7 +72,7 @@ export default function GlobalBrainLinesBackground({ progress }) {
         viewBox="0 0 1200 900"
         preserveAspectRatio="xMidYMid slice"
         className="h-full w-full"
-        style={{ opacity: useTransform(progress, [0, 0.15, 1], [0.06, 0.18, 0.32]) }}
+        style={{ opacity: useTransform(progress, [0, 0.15, 1], [0.08, 0.22, 0.38]) }}
       >
         <defs>
           <filter id="globalGlow" x="-80%" y="-80%" width="260%" height="260%">

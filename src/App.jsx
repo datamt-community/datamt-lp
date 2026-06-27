@@ -14,18 +14,14 @@ import GlobalBrainLinesBackground from './components/GlobalBrainLinesBackground'
 export default function App() {
   const [introFeita, setIntroFeita] = useState(false)
   const heroStageRef = useRef(null)
-  const contentStageRef = useRef(null)
+  const { scrollYProgress: pageScrollProgress } = useScroll()
   const { scrollYProgress: heroStageProgress } = useScroll({
     target: heroStageRef,
     offset: ['start start', 'end end']
   })
-  const { scrollYProgress: contentStageProgress } = useScroll({
-    target: contentStageRef,
-    offset: ['start start', 'end end']
-  })
   const globalProgress = useTransform(
-    [heroStageProgress, contentStageProgress],
-    ([heroProgress, contentProgress]) => (heroProgress >= 0.995 ? contentProgress : 0)
+    [heroStageProgress, pageScrollProgress],
+    ([heroProgress, pageProgress]) => (heroProgress < 0.995 ? 0 : pageProgress)
   )
 
   return (
@@ -44,13 +40,11 @@ export default function App() {
               </div>
             </div>
 
-            <div ref={contentStageRef}>
-              <Pilares pilares={data.pilares} />
-              <Eventos eventos={data.eventos} />
-              <Organizadores organizadores={data.organizadores} />
-              <Parceiros parceiros={data.parceiros} />
-              <Footer site={data.site} nav={data.nav} social={data.social} />
-            </div>
+            <Pilares pilares={data.pilares} />
+            <Eventos eventos={data.eventos} />
+            <Organizadores organizadores={data.organizadores} />
+            <Parceiros parceiros={data.parceiros} />
+            <Footer site={data.site} nav={data.nav} social={data.social} />
           </div>
         </div>
       )}

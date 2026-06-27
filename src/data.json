@@ -19,6 +19,7 @@
   "hero": {
     "titulo": "Conectando pessoas.\nTransformando dados em inovação.",
     "subtitulo": "A comunidade técnica de dados de Mato Grosso.",
+    "manifesto": "A DATA MT conecta pessoas curiosas, empresas e comunidades para transformar dados em decisões reais, criar oportunidades no estado e acelerar inovação com colaboração prática.",
     "ctas": [
       { "label": "Ver Eventos",           "href": "#eventos",       "variante": "primario" },
       { "label": "Conhecer a Comunidade", "href": "#organizadores", "variante": "outline"  }

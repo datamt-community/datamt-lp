@@ -1,10 +1,7 @@
 import { useRef } from 'react'
-import { motion, useScroll, useTransform } from 'framer-motion'
+import { motion, useTransform, useMotionValue, useSpring } from 'framer-motion'
 import ScrollBrainBackground from './ScrollBrainBackground'
 import DatamtSymbolRingProgress from './DatamtSymbolRingProgress'
-
-const manifestoTexto =
-  'A DATA MT conecta pessoas curiosas, empresas e comunidades para transformar dados em decisões reais, criar oportunidades no estado e acelerar inovação com colaboração prática.'
 
 function ScrollWord({ word, index, total, progress }) {
   const start = 0.12 + (index / total) * 0.68
@@ -28,28 +25,40 @@ const fadeUp = {
 }
 
 export default function Hero({ hero, progress }) {
-  const heroRef = useRef(null)
-  const { scrollYProgress: localScrollYProgress } = useScroll({
-    target: heroRef,
-    offset: ['start start', 'end start']
-  })
-  const scrollYProgress = useTransform(
-    [localScrollYProgress, progress ?? localScrollYProgress],
-    ([localValue, externalValue]) => Math.max(localValue, externalValue)
-  )
+  const sectionRef = useRef(null)
+  const scrollYProgress = progress
+
+  const rawX = useMotionValue(-9999)
+  const rawY = useMotionValue(-9999)
+  const glowX = useSpring(rawX, { stiffness: 80, damping: 20 })
+  const glowY = useSpring(rawY, { stiffness: 80, damping: 20 })
+
+  function onMouseMove(e) {
+    const rect = sectionRef.current?.getBoundingClientRect()
+    if (!rect) return
+    rawX.set(e.clientX - rect.left)
+    rawY.set(e.clientY - rect.top)
+  }
+
+  function onMouseLeave() {
+    rawX.set(-9999)
+    rawY.set(-9999)
+  }
 
   const titleY = useTransform(scrollYProgress, [0, 1], [0, -70])
   const titleOpacity = useTransform(scrollYProgress, [0, 1], [1, 0.72])
   const manifestoGlow = useTransform(scrollYProgress, [0.1, 0.93], [0.2, 1])
-  const manifestoWords = manifestoTexto.split(' ')
+  const manifestoWords = (hero.manifesto ?? '').split(' ')
 
   const manifestoLift = useTransform(scrollYProgress, [0, 1], [0, -16])
   const logoOpacity = useTransform(scrollYProgress, [0.03, 0.2], [0.4, 1])
 
   return (
     <section
-      ref={heroRef}
+      ref={sectionRef}
       id="sobre"
+      onMouseMove={onMouseMove}
+      onMouseLeave={onMouseLeave}
       className="relative min-h-screen flex items-center justify-center overflow-hidden"
       style={{
         backgroundImage: `
@@ -58,6 +67,23 @@ export default function Hero({ hero, progress }) {
         `,
       }}
     >
+      {/* Brilho que segue o mouse */}
+      <motion.div
+        aria-hidden="true"
+        className="pointer-events-none absolute z-10"
+        style={{
+          left: glowX,
+          top: glowY,
+          translateX: '-50%',
+          translateY: '-50%',
+          width: '600px',
+          height: '600px',
+          background: 'radial-gradient(circle, rgba(0,200,255,0.13) 0%, rgba(45,107,255,0.07) 40%, transparent 70%)',
+          borderRadius: '50%',
+          filter: 'blur(8px)',
+        }}
+      />
+
       <motion.div
         aria-hidden="true"
         className="absolute -top-32 left-1/2 h-[30rem] w-[30rem] -translate-x-1/2 rounded-full blur-3xl"
