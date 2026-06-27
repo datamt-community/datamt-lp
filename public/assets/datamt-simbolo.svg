@@ -6,6 +6,10 @@
       <stop offset="0.5" stop-color="#4A7FFF"/>
       <stop offset="1" stop-color="#7B2FFF"/>
     </linearGradient>
+    <filter id="globalGlow" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="2.8" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
 
     <!--
       Mask: branco = mostra o circulo preenchido, preto = recorta (lacuna).
@@ -15,10 +19,28 @@
     <mask id="brainCut" maskUnits="userSpaceOnUse" x="50" y="50" width="300" height="300">
       <rect x="50" y="50" width="300" height="300" fill="white"/>
 
-      <g transform="matrix(1,0,0,1,66.022615,47.61435)">
+      <!-- arcos do anel como lacunas na borda do circulo -->
+      <g transform="matrix(0.941,0,0,0.941,11.8,11.8)">
+        <path d="M 295.46,104.54 A 135,135 0 0,1 333.99,183.55"
+              fill="none" stroke="black" stroke-width="6" stroke-linecap="round"/>
+        <path d="M 335.0,200.0 A 135,135 0 0,1 306.38,283.11"
+              fill="none" stroke="black" stroke-width="6" stroke-linecap="round"/>
+        <path d="M 295.46,295.46 A 135,135 0 0,1 216.45,333.99"
+              fill="none" stroke="black" stroke-width="6" stroke-linecap="round"/>
+        <path d="M 200.0,335.0 A 135,135 0 0,1 135.58,318.64 L 140.79,300.91 L 127.86,314.11 A 135,135 0 0,1 116.89,306.38"
+              fill="none" stroke="black" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M 104.54,295.46 A 135,135 0 0,1 66.01,216.45"
+              fill="none" stroke="black" stroke-width="6" stroke-linecap="round"/>
+        <path d="M 65.0,200.0 A 135,135 0 0,1 93.62,122.89"
+              fill="none" stroke="black" stroke-width="6" stroke-linecap="round"/>
+        <path d="M 200.0,65.0 A 135,135 0 0,1 283.1,93.6"
+              fill="none" stroke="black" stroke-width="6" stroke-linecap="round"/>
+      </g>
+
+      <g transform="matrix(1,0,0,1,66.022615,59)">
 
         <!-- contorno externo do cerebro -->
-        <path d="M 156 209 L 127 166 L 89 178 L 57 166 L 38 116 L 76 62 L 127 46 L 152 55 L 190 70 L 222 114 L 209 166 L 177 201"
+        <path d="M 159 202 L 127 166 L 89 178 L 57 166 L 38 116 L 76 62 L 127 46 L 152 55 L 190 70 L 222 114 L 209 166 L 177 201"
               fill="none" stroke="black" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
 
         <!-- conexoes primarias -->
@@ -70,9 +92,9 @@
           <path d="M 152 240 A 14 5 0 0 0 180 240" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
           <path d="M 152 255.517 A 14 5.5 0 0 0 180 255.517" fill="none" stroke="white" stroke-width="2" stroke-linecap="round"/>
           <!-- pontos entre segmentacoes -->
-          <circle cx="157" cy="218" r="2.5" fill="white"/>
-          <circle cx="157" cy="233" r="2.5" fill="white"/>
-          <circle cx="157" cy="248" r="2.5" fill="white"/>
+          <circle cx="157" cy="220" r="2.5" fill="white"/>
+          <circle cx="157" cy="236" r="2.5" fill="white"/>
+          <circle cx="157" cy="252" r="2.5" fill="white"/>
         </g>
 
       </g>
@@ -84,8 +106,9 @@
     O segmento MT com seu recorte em chevron esta preservado.
     A mask recorta o cerebro + cilindro do interior.
   -->
-  <g transform="matrix(0.940956,0,0,0.941408,11.654505,10.84766)" mask="url(#brainCut)">
-    <path d="M 200.0,65.0
+  <g transform="matrix(0.941,0,0,0.941,11.8,11.8)" mask="url(#brainCut)">
+    <g transform="translate(200,200) scale(0.94) translate(-200,-200)">
+    <path d="M 199.0,66.0
              A 135,135 0 0,1 283.1,93.6
              L 295.46,104.54
              A 135,135 0 0,1 333.99,183.55
@@ -101,8 +124,17 @@
              L 104.54,295.46
              A 135,135 0 0,1 66.01,216.45
              L 65.0,200.0
-             A 135,135 0 0,1 93.62,116.89
+             A 135,135 0 0,1 95.99,122.89
              Z"
           fill="url(#shapeFill)"/>
+    </g>
   </g>
+
+  <!-- ponto central do cerebro — mesmos transforms do grupo do cerebro -->
+  <g transform="matrix(0.941,0,0,0.941,11.8,11.8)">
+    <g transform="matrix(1,0,0,1,66.022615,59)">
+      <circle cx="127" cy="114" r="7" fill="#4A7FFF" opacity="0.75" filter="url(#globalGlow)"/>
+    </g>
+  </g>
+
 </svg>
