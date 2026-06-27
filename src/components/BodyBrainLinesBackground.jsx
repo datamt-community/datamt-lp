@@ -69,12 +69,12 @@ function NodeReveal({ progress, node, at, color, radius }) {
 
 export default function BodyBrainLinesBackground({ progress }) {
   return (
-    <div aria-hidden="true" className="pointer-events-none fixed inset-0 z-20 overflow-hidden">
+    <div aria-hidden="true" className="pointer-events-none fixed inset-0 z-0 overflow-hidden">
       <motion.svg
         viewBox="0 0 1200 900"
         preserveAspectRatio="xMidYMid slice"
         className="h-full w-full"
-        style={{ opacity: useTransform(progress, [0, 0.15, 1], [0.14, 0.3, 0.52]) }}
+        style={{ opacity: useTransform(progress, [0, 0.15, 1], [0.06, 0.13, 0.22]) }}
       >
         <defs>
           <filter id="globalGlow" x="-80%" y="-80%" width="260%" height="260%">

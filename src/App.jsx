@@ -37,7 +37,9 @@ function MainContent() {
 
   return (
     <div className="bg-datamt-bg min-h-screen relative isolate">
-      <BodyBrainLinesBackground progress={bodyProgress} />
+      <div className="fixed inset-0 z-0 pointer-events-none">
+        <BodyBrainLinesBackground progress={bodyProgress} />
+      </div>
 
       <div className="relative z-10">
         <Navbar nav={data.nav} site={data.site} />

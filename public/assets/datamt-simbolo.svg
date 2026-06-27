@@ -1,94 +1,108 @@
 <?xml version="1.0" encoding="utf-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="50 50 300 300" width="400" height="400">
   <defs>
-    <linearGradient id="textGrad" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0" stop-color="#00F2FE"/><stop offset="1" stop-color="#F355FF"/></linearGradient>
-    <radialGradient id="coreGlow" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#00F2FE" stop-opacity="0.25"/><stop offset="1" stop-color="#00F2FE" stop-opacity="0"/></radialGradient>
-    <radialGradient id="glowCenter" cx="50%" cy="45%" r="55%"><stop offset="0" stop-color="#7B2FFF" stop-opacity="0.35"/><stop offset="1" stop-color="#070B14" stop-opacity="0"/></radialGradient>
-    <radialGradient id="glowCyan" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#00F2FE" stop-opacity="0.9"/><stop offset="1" stop-color="#4FACFE" stop-opacity="0.5"/></radialGradient>
-    <radialGradient id="glowPurple" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#9B30FF" stop-opacity="0.9"/><stop offset="1" stop-color="#4A1FA8" stop-opacity="0.5"/></radialGradient>
-    <radialGradient id="glowBlue" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#2D6BFF" stop-opacity="0.9"/><stop offset="1" stop-color="#1A40CC" stop-opacity="0.5"/></radialGradient>
-    <radialGradient id="glowWhite" cx="40%" cy="35%" r="60%"><stop offset="0" stop-color="#FFFFFF" stop-opacity="1"/><stop offset="1" stop-color="#A0C4FF" stop-opacity="0.7"/></radialGradient>
-    <radialGradient id="dbFill" cx="30%" cy="30%" r="70%"><stop offset="0" stop-color="#1a2a5e"/><stop offset="1" stop-color="#070B14"/></radialGradient>
-    <linearGradient id="edgeMain" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0" stop-color="#00F2FE"/><stop offset="1" stop-color="#4A1FA8"/></linearGradient>
-    <linearGradient id="dbStroke" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0" stop-color="#00F2FE"/><stop offset="0.5" stop-color="#2D6BFF"/><stop offset="1" stop-color="#4A1FA8"/></linearGradient>
-    <filter id="softGlow"><feGaussianBlur stdDeviation="3" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
-    <filter id="nodeGlow"><feGaussianBlur stdDeviation="2.5" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
-    <filter id="dbGlow" x="-80%" y="-80%" width="260%" height="260%"><feGaussianBlur stdDeviation="3.5" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
-    <filter id="dbNodeGlow" x="-80%" y="-80%" width="260%" height="260%"><feGaussianBlur stdDeviation="2.5" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <linearGradient id="shapeFill" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0" stop-color="#00F2FE"/>
+      <stop offset="0.5" stop-color="#4A7FFF"/>
+      <stop offset="1" stop-color="#7B2FFF"/>
+    </linearGradient>
+
+    <!--
+      Mask: branco = mostra o circulo preenchido, preto = recorta (lacuna).
+      maskUnits="userSpaceOnUse" => coordenadas no sistema do viewBox (50-350).
+      O grupo icone usa transform +66,+47.6 e o tronco usa seu proprio transform interno.
+    -->
+    <mask id="brainCut" maskUnits="userSpaceOnUse" x="50" y="50" width="300" height="300">
+      <rect x="50" y="50" width="300" height="300" fill="white"/>
+
+      <g transform="matrix(1,0,0,1,66.022615,47.61435)">
+
+        <!-- contorno externo do cerebro -->
+        <path d="M 156 209 L 127 166 L 89 178 L 57 166 L 38 116 L 76 62 L 127 46 L 152 55 L 190 70 L 222 114 L 209 166 L 177 201"
+              fill="none" stroke="black" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+
+        <!-- conexoes primarias -->
+        <path d="M 177 201 L 165 152 L 127 114 L 89 130 L 51 140" stroke="black" stroke-width="4" fill="none" stroke-linecap="round"/>
+        <path d="M 165 152 L 178 101 L 140 62 L 101 75 L 76 62"  stroke="black" stroke-width="4" fill="none" stroke-linecap="round"/>
+        <path d="M 127 114 L 178 101" stroke="black" stroke-width="3" fill="none" stroke-linecap="round"/>
+        <path d="M 89 178 L 127 114"  stroke="black" stroke-width="3" fill="none" stroke-linecap="round"/>
+        <path d="M 127 166 L 165 152" stroke="black" stroke-width="3" fill="none" stroke-linecap="round"/>
+        <path d="M 209 166 L 178 101" stroke="black" stroke-width="3" fill="none" stroke-linecap="round"/>
+        <path d="M 222 114 L 178 101" stroke="black" stroke-width="3" fill="none" stroke-linecap="round"/>
+
+        <!-- conexoes secundarias tracejadas -->
+        <g fill="none" stroke="black" stroke-width="2.5" stroke-dasharray="5 3" stroke-linecap="round">
+          <line x1="57"  y1="166" x2="89"  y2="130"/>
+          <line x1="38"  y1="116" x2="89"  y2="130"/>
+          <line x1="127" y1="46"  x2="140" y2="62"/>
+          <line x1="190" y1="70"  x2="178" y2="101"/>
+          <line x1="127" y1="166" x2="89"  y2="130"/>
+          <line x1="209" y1="166" x2="165" y2="152"/>
+          <line x1="152" y1="55"  x2="127" y2="114"/>
+        </g>
+
+        <!-- nos do cerebro (circulos pretos = lacunas) -->
+        <circle cx="38"  cy="116" r="7"  fill="black"/>
+        <circle cx="76"  cy="62"  r="8"  fill="black"/>
+        <circle cx="127" cy="46"  r="7"  fill="black"/>
+        <circle cx="190" cy="70"  r="8.5" fill="black"/>
+        <circle cx="222" cy="114" r="7.5" fill="black"/>
+        <circle cx="209" cy="166" r="7"  fill="black"/>
+        <circle cx="57"  cy="166" r="7"  fill="black"/>
+        <circle cx="89"  cy="130" r="8"  fill="black"/>
+        <circle cx="178" cy="101" r="8.5" fill="black"/>
+        <circle cx="165" cy="152" r="8.5" fill="black"/>
+        <circle cx="89"  cy="178" r="7"  fill="black"/>
+        <circle cx="140" cy="62"  r="7"  fill="black"/>
+        <!-- no central (maior) -->
+        <circle cx="127" cy="114" r="13" fill="black"/>
+
+
+        <!-- cilindro (banco de dados) -->
+        <g transform="matrix(1.02136,0,0,0.992131,-2.775261,-6)">
+          <!-- corpo: fundo preto (recorte) -->
+          <path d="M 155 210 L 155 254 C 155 262 177 262 177 254 L 177 210"
+                fill="black"/>
+          <!-- tampa superior -->
+          <ellipse cx="166" cy="210" rx="11" ry="5.5" fill="black"/>
+          <!-- linhas de segmentacao: cor do circulo (branco no mask) -->
+          <path d="M 152 225 A 14 5 0 0 0 180 225" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+          <path d="M 152 240 A 14 5 0 0 0 180 240" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+          <path d="M 152 255.517 A 14 5.5 0 0 0 180 255.517" fill="none" stroke="white" stroke-width="2" stroke-linecap="round"/>
+          <!-- pontos entre segmentacoes -->
+          <circle cx="157" cy="218" r="2.5" fill="white"/>
+          <circle cx="157" cy="233" r="2.5" fill="white"/>
+          <circle cx="157" cy="248" r="2.5" fill="white"/>
+        </g>
+
+      </g>
+    </mask>
   </defs>
-  <g id="simbolo">
-    <circle id="simbolo-glow" cx="200" cy="200" r="150" fill="url(#coreGlow)"/>
-    <g id="anel-pilares" transform="matrix(0.940956,0,0,0.941408,11.654505,10.84766)">
-      <path d="M 295.46,104.54 A 135,135 0 0,1 333.99,183.55" fill="none" stroke="#00F2FE" stroke-width="6" stroke-linecap="round"/>
-      <path d="M 335.0,200.0 A 135,135 0 0,1 306.38,283.11" fill="none" stroke="#4FACFE" stroke-width="6" stroke-linecap="round"/>
-      <path d="M 295.46,295.46 A 135,135 0 0,1 216.45,333.99" fill="none" stroke="#2D6BFF" stroke-width="6" stroke-linecap="round"/>
-      <path d="M 200.0,335.0 A 135,135 0 0,1 135.58,318.64 L 140.79,300.91 L 127.86,314.11 A 135,135 0 0,1 116.89,306.38" fill="none" stroke="#5B4FE8" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
-      <path d="M 104.54,295.46 A 135,135 0 0,1 66.01,216.45" fill="none" stroke="#7B2FFF" stroke-width="6" stroke-linecap="round"/>
-      <path d="M 65.0,200.0 A 135,135 0 0,1 93.62,116.89" fill="none" stroke="#6A1FDD" stroke-width="6" stroke-linecap="round"/>
-      <path d="M 200.0,65.0 A 135,135 0 0,1 283.1,93.6" fill="none" stroke="#4A1FA8" stroke-width="6" stroke-linecap="round"/>
-    </g>
-    <g id="icone" transform="matrix(1,0,0,1,66.022615,47.61435)">
-      <ellipse cx="140" cy="145" rx="120" ry="110" fill="url(#glowCenter)"/>
-      <g id="cerebro">
-        <g fill="none" stroke="#2D6BFF" stroke-width="1.5" stroke-dasharray="5 3" opacity="0.5" stroke-linecap="round">
-          <line x1="57" y1="166" x2="89" y2="130"/><line x1="38" y1="116" x2="89" y2="130"/>
-          <line x1="127" y1="46" x2="140" y2="62"/><line x1="190" y1="70" x2="178" y2="101"/>
-          <line x1="127" y1="166" x2="89" y2="130"/><line x1="209" y1="166" x2="165" y2="152"/>
-          <line x1="152" y1="55" x2="127" y2="114"/>
-        </g>
-        <g fill="none" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M 177 201 L 165 152 L 127 114 L 89 130 L 51 140" stroke="url(#edgeMain)" stroke-width="2.5"/>
-          <path d="M 165 152 L 178 101 L 140 62 L 101 75 L 76 62" stroke="#9B30FF" stroke-width="2.5"/>
-          <path d="M 127 114 L 178 101" stroke="#9B30FF" stroke-width="2"/>
-          <path d="M 89 178 L 127 114" stroke="#2D6BFF" stroke-width="2"/>
-          <path d="M 127 166 L 165 152" stroke="#2D6BFF" stroke-width="2"/>
-          <path d="M 209 166 L 178 101" stroke="#9B30FF" stroke-width="2"/>
-          <path d="M 222 114 L 178 101" stroke="#9B30FF" stroke-width="2"/>
-        </g>
-        <path d="M 155 201 L 127 166 L 89 178 L 57 166 L 38 116 L 76 62 L 127 46 L 152 55 L 190 70 L 222 114 L 209 166 L 177 201" fill="none" stroke="url(#edgeMain)" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" filter="url(#softGlow)"/>
-        <g filter="url(#nodeGlow)">
-          <circle cx="38" cy="116" r="5" fill="#070B14" stroke="#00F2FE" stroke-width="2"/>
-          <circle cx="76" cy="62" r="6" fill="url(#glowCyan)" stroke="#00F2FE" stroke-width="1.5"/>
-          <circle cx="127" cy="46" r="5" fill="#070B14" stroke="#00F2FE" stroke-width="2"/>
-          <circle cx="190" cy="70" r="6.5" fill="url(#glowCyan)" stroke="#00F2FE" stroke-width="1.5"/>
-          <circle cx="222" cy="114" r="5.5" fill="#070B14" stroke="#00F2FE" stroke-width="2"/>
-          <circle cx="209" cy="166" r="5" fill="#070B14" stroke="#00F2FE" stroke-width="2"/>
-          <circle cx="57" cy="166" r="5" fill="#070B14" stroke="#00F2FE" stroke-width="2"/>
-        </g>
-        <g filter="url(#nodeGlow)">
-          <circle cx="89" cy="130" r="6" fill="url(#glowPurple)" stroke="#9B30FF" stroke-width="1.5"/>
-          <circle cx="178" cy="101" r="6.5" fill="#070B14" stroke="#9B30FF" stroke-width="2"/>
-          <circle cx="165" cy="152" r="6.5" fill="url(#glowBlue)" stroke="#2D6BFF" stroke-width="1.5"/>
-          <circle cx="127" cy="114" r="5.5" fill="#070B14" stroke="#9B30FF" stroke-width="2"/>
-          <circle cx="89" cy="178" r="5" fill="#070B14" stroke="#2D6BFF" stroke-width="2"/>
-          <circle cx="140" cy="62" r="5" fill="#070B14" stroke="#9B30FF" stroke-width="2"/>
-        </g>
-        <g filter="url(#nodeGlow)">
-          <circle cx="127" cy="114" r="10" fill="#070B14" stroke="#6A1FDD" stroke-width="2.5"/>
-          <circle cx="127" cy="114" r="6" fill="url(#glowWhite)" stroke="none"/>
-          <circle cx="124" cy="111" r="2" fill="#FFFFFF" opacity="0.6"/>
-        </g>
-      </g>
-      <g id="tronco-encefalico" transform="matrix(1.02136,0,0,0.992131,-2.775261,0.673415)">
-        <g id="banco-de-dados">
-          <path d="M 152 210 C 150 228 149.705 237.605 151.705 255.605 C 151.705 259.454 161.605 263.332 170.938 261.407 C 175.27 260.514 180.589 257.538 180.589 255.752 C 182.589 237.752 182 228 180 210" fill="url(#dbFill)" stroke="none"/>
-          <path d="M 151.864 210 C 149.955 228 149.75 237.752 151.841 255.752" fill="none" stroke="url(#dbStroke)" stroke-width="2.5" stroke-linecap="round"/>
-          <path d="M 180 210 C 182 225.266 182 240.533 180 255.799" fill="none" stroke="url(#dbStroke)" stroke-width="2.5" stroke-linecap="round"/>
-          <ellipse cx="166" cy="210" rx="14" ry="5.5" fill="url(#dbFill)" stroke="#00F2FE" stroke-width="2.5" filter="url(#dbGlow)"/>
-          <path d="M 156 208 Q 166 206 174 208" fill="none" stroke="#FFFFFF" stroke-width="1.2" opacity="0.4" stroke-linecap="round"/>
-          <circle cx="155" cy="217" r="2.5" fill="#2D6BFF"/>
-          <path d="M 152 224 A 14 5 0 0 0 180 224" fill="none" stroke="#2D6BFF" stroke-width="2" stroke-linecap="round"/>
-          <circle cx="155" cy="231" r="2.5" fill="#5B4FE8"/>
-          <path d="M 152 238 A 14 5 0 0 0 180 238" fill="none" stroke="#5B4FE8" stroke-width="2" stroke-linecap="round"/>
-          <circle cx="155" cy="247" r="2.5" fill="#7B2FFF"/>
-          <path d="M 152 255.517 A 14 5.5 0 0 0 180 255.517" fill="none" stroke="#7B2FFF" stroke-width="2" stroke-linecap="round"/>
-        </g>
-        <g filter="url(#dbNodeGlow)" transform="matrix(1,0,0,1,-0.242854,4.128591)">
-          <circle cx="155" cy="201" r="4.5" fill="#FFFFFF" stroke="#00F2FE" stroke-width="1.5"/>
-          <circle cx="166" cy="201" r="5.5" fill="#FFFFFF" stroke="#9B30FF" stroke-width="1.5"/>
-          <circle cx="177" cy="201" r="4.5" fill="#FFFFFF" stroke="#00F2FE" stroke-width="1.5"/>
-        </g>
-      </g>
-    </g>
+
+  <!--
+    Circulo preenchido com a borda exata do anel-pilares (arcos conectados por linhas retas nos gaps).
+    O segmento MT com seu recorte em chevron esta preservado.
+    A mask recorta o cerebro + cilindro do interior.
+  -->
+  <g transform="matrix(0.940956,0,0,0.941408,11.654505,10.84766)" mask="url(#brainCut)">
+    <path d="M 200.0,65.0
+             A 135,135 0 0,1 283.1,93.6
+             L 295.46,104.54
+             A 135,135 0 0,1 333.99,183.55
+             L 335.0,200.0
+             A 135,135 0 0,1 306.38,283.11
+             L 295.46,295.46
+             A 135,135 0 0,1 216.45,333.99
+             L 200.0,335.0
+             A 135,135 0 0,1 135.58,318.64
+             L 140.79,300.91
+             L 127.86,314.11
+             A 135,135 0 0,1 116.89,306.38
+             L 104.54,295.46
+             A 135,135 0 0,1 66.01,216.45
+             L 65.0,200.0
+             A 135,135 0 0,1 93.62,116.89
+             Z"
+          fill="url(#shapeFill)"/>
   </g>
 </svg>
