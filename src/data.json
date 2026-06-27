@@ -1,0 +1,148 @@
+{
+  "site": {
+    "nome": "DATA MT",
+    "subtitulo": "Comunidade Técnica de Dados",
+    "tagline": "Conectando pessoas. Transformando dados em inovação.",
+    "taglineFooter": "Conectando pessoas. Compartilhando conhecimento. Transformando dados em inovação.",
+    "descricao": "A comunidade técnica de dados de Mato Grosso.",
+    "logo": "/assets/logo.svg"
+  },
+
+  "nav": [
+    { "label": "Sobre",         "href": "#sobre" },
+    { "label": "Pilares",       "href": "#pilares" },
+    { "label": "Eventos",       "href": "#eventos" },
+    { "label": "Organizadores", "href": "#organizadores" },
+    { "label": "Parceiros",     "href": "#parceiros" }
+  ],
+
+  "hero": {
+    "titulo": "Conectando pessoas.\nTransformando dados em inovação.",
+    "subtitulo": "A comunidade técnica de dados de Mato Grosso.",
+    "ctas": [
+      { "label": "Ver Eventos",           "href": "#eventos",       "variante": "primario" },
+      { "label": "Conhecer a Comunidade", "href": "#organizadores", "variante": "outline"  }
+    ]
+  },
+
+  "pilares": [
+    {
+      "id": 1,
+      "titulo": "Data Engineering",
+      "descricao": "Pipelines, ETL/ELT, DataOps, Databricks, Fabric, Snowflake.",
+      "icone": "database"
+    },
+    {
+      "id": 2,
+      "titulo": "AI Engineering & Applied AI",
+      "descricao": "LLMs, agentes, MCP servers, RAG, aplicações com IA.",
+      "icone": "brain"
+    },
+    {
+      "id": 3,
+      "titulo": "ML & Data Science",
+      "descricao": "Modelos preditivos, MLOps, estatística, ciência de dados.",
+      "icone": "chart-scatter"
+    },
+    {
+      "id": 4,
+      "titulo": "Analytics & BI",
+      "descricao": "Power BI, DAX, dashboards, storytelling com dados.",
+      "icone": "chart-bar"
+    },
+    {
+      "id": 5,
+      "titulo": "Cloud & Plataformas",
+      "descricao": "Azure, AWS, GCP, Microsoft Fabric, Databricks, Snowflake.",
+      "icone": "cloud"
+    },
+    {
+      "id": 6,
+      "titulo": "Governança & Qualidade",
+      "descricao": "Segurança, qualidade de dados, compliance, privacidade.",
+      "icone": "shield"
+    },
+    {
+      "id": 7,
+      "titulo": "Carreira & Comunidade",
+      "descricao": "Vagas, networking, eventos, parcerias com universidades.",
+      "icone": "users"
+    }
+  ],
+
+  "eventos": [
+    {
+      "id": 1,
+      "titulo": "Meetup DATA MT #1",
+      "data": "2025-08-15",
+      "dataFormatada": "15 Ago 2025",
+      "descricao": "Primeiro meetup oficial da DATA MT. Palestras sobre Data Engineering e AI no ecossistema de dados de MT.",
+      "local": "Cuiabá, MT",
+      "tags": ["Presencial", "Gratuito"],
+      "linkInscricao": "#",
+      "imagens": []
+    },
+    {
+      "id": 2,
+      "titulo": "Workshop: Introdução ao Microsoft Fabric",
+      "data": "2025-09-10",
+      "dataFormatada": "10 Set 2025",
+      "descricao": "Hands-on com Microsoft Fabric: lakehouse, pipelines e Power BI integrado.",
+      "local": "Online",
+      "tags": ["Online", "Gratuito", "Hands-on"],
+      "linkInscricao": "#",
+      "imagens": []
+    },
+    {
+      "id": 3,
+      "titulo": "DATA MT Summit 2025",
+      "data": "2025-11-22",
+      "dataFormatada": "22 Nov 2025",
+      "descricao": "Evento anual da comunidade com palestras nacionais, workshops e networking.",
+      "local": "Cuiabá, MT",
+      "tags": ["Presencial", "Gratuito", "Anual"],
+      "linkInscricao": "#",
+      "imagens": []
+    }
+  ],
+
+  "organizadores": [
+    {
+      "id": 1,
+      "nome": "Nome Organizador",
+      "cargo": "Fundador & Data Engineer",
+      "foto": "",
+      "linkedin": "#",
+      "github": "#"
+    },
+    {
+      "id": 2,
+      "nome": "Nome Organizador",
+      "cargo": "Co-fundador & AI Engineer",
+      "foto": "",
+      "linkedin": "#",
+      "github": "#"
+    },
+    {
+      "id": 3,
+      "nome": "Nome Organizador",
+      "cargo": "Analytics & BI Lead",
+      "foto": "",
+      "linkedin": "#",
+      "github": "#"
+    }
+  ],
+
+  "parceiros": [
+    { "id": 1, "nome": "Parceiro 1", "logo": "", "url": "#" },
+    { "id": 2, "nome": "Parceiro 2", "logo": "", "url": "#" },
+    { "id": 3, "nome": "Parceiro 3", "logo": "", "url": "#" }
+  ],
+
+  "social": [
+    { "rede": "linkedin",  "url": "#", "icone": "linkedin" },
+    { "rede": "github",    "url": "#", "icone": "github" },
+    { "rede": "youtube",   "url": "#", "icone": "youtube" },
+    { "rede": "instagram", "url": "#", "icone": "instagram" }
+  ]
+}

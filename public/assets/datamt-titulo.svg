@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 430 90" width="430" height="90">
+  <defs>
+    <linearGradient id="textGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0" stop-color="#00F2FE"/>
+      <stop offset="1" stop-color="#F355FF"/>
+    </linearGradient>
+  </defs>
+  <g id="titulo">
+    <text x="0" y="80" font-family="Inter,Segoe UI,-apple-system,sans-serif" font-size="88" font-weight="900" fill="#FFFFFF" letter-spacing="-1.5">DATA</text>
+    <text x="250" y="80" font-family="Inter,Segoe UI,-apple-system,sans-serif" font-size="88" font-weight="900" fill="url(#textGrad)" letter-spacing="-1.5">MT</text>
+  </g>
+</svg>
