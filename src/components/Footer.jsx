@@ -1,4 +1,5 @@
 import { AtSign, Link, Play, Camera } from 'lucide-react'
+import assetUrl from '../assetUrl'
 
 const iconesSocial = {
   linkedin:  AtSign,
@@ -13,10 +14,7 @@ export default function Footer({ site, nav, social }) {
       <div className="max-w-7xl mx-auto px-6 py-12 flex flex-col md:flex-row items-center md:items-start justify-between gap-10">
         {/* Logo + tagline */}
         <div className="flex flex-col items-center md:items-start gap-3 max-w-xs">
-          <div className="flex items-center gap-3">
-            <img src="/assets/datamt-simbolo.svg" alt="DATA MT" className="h-7 w-7" />
-            <span className="font-bold text-white">{site.nome}</span>
-          </div>
+          <img src={assetUrl('/assets/datamt-logo-titulo.svg')} alt="DATA MT" className="h-32 w-auto" />
           <p className="text-datamt-muted text-sm leading-relaxed text-center md:text-left">
             {site.taglineFooter}
           </p>
