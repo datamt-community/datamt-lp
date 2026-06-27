@@ -38,16 +38,16 @@ export default function Parceiros({ parceiros }) {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: i * 0.07 }}
-              className="flex items-center justify-center p-6 rounded-xl border border-datamt-border bg-datamt-surface opacity-50 hover:opacity-100 hover:border-datamt-cyan/40 transition-all duration-300 min-h-[100px]"
+              className="relative rounded-xl border border-datamt-border bg-datamt-surface opacity-50 hover:opacity-100 hover:border-datamt-cyan/40 transition-all duration-300 h-[100px] overflow-hidden"
             >
               {parceiro.logo ? (
                 <img
                   src={parceiro.logo}
                   alt={parceiro.nome}
-                  className="max-h-12 max-w-full object-contain"
+                  className="absolute inset-0 w-full h-full object-contain p-4"
                 />
               ) : (
-                <span className="text-white font-semibold text-sm text-center">
+                <span className="absolute inset-0 flex items-center justify-center text-white font-semibold text-sm text-center p-4">
                   {parceiro.nome}
                 </span>
               )}

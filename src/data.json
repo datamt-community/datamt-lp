@@ -139,7 +139,7 @@
       "local": "Cuiabá, MT",
       "tags": ["Presencial", "Gratuito"],
       "fotos": [
-        "/assets/radar_bsb.jpg"
+        "/assets/img1.jpg"
       ]
     },
     {
@@ -151,8 +151,8 @@
       "local": "Online",
       "tags": ["Online", "Gratuito", "Workshop"],
       "fotos": [
-        "/assets/radar_bsb.jpg",
-        "/assets/radar_bsb.jpg"
+        "/assets/img2.jpg",
+        "/assets/img3.webp"
       ]
     },
     {
@@ -164,9 +164,9 @@
       "local": "Cuiabá, MT",
       "tags": ["Presencial", "Gratuito", "Marco"],
       "fotos": [
-        "/assets/radar_bsb.jpg",
-        "/assets/radar_bsb.jpg",
-        "/assets/radar_bsb.jpg"
+        "/assets/img1.jpg",
+        "/assets/img2.jpg",
+        "/assets/img3.webp"
       ]
     },
     {
@@ -178,7 +178,7 @@
       "local": "Cuiabá, MT",
       "tags": ["Presencial", "Carreira"],
       "fotos": [
-        "/assets/radar_bsb.jpg"
+        "/assets/img2.jpg"
       ]
     },
     {
@@ -190,8 +190,8 @@
       "local": "Online",
       "tags": ["Online", "Hands-on", "Python"],
       "fotos": [
-        "/assets/radar_bsb.jpg",
-        "/assets/radar_bsb.jpg"
+        "/assets/img3.webp",
+        "/assets/img1.jpg"
       ]
     },
     {
@@ -203,9 +203,9 @@
       "local": "Cuiabá, MT",
       "tags": ["Presencial", "Governança", "LGPD"],
       "fotos": [
-        "/assets/radar_bsb.jpg",
-        "/assets/radar_bsb.jpg",
-        "/assets/radar_bsb.jpg"
+        "/assets/img1.jpg",
+        "/assets/img2.jpg",
+        "/assets/img3.webp"
       ]
     },
     {
@@ -217,7 +217,7 @@
       "local": "Cuiabá, MT",
       "tags": ["Presencial", "Comunidade"],
       "fotos": [
-        "/assets/radar_bsb.jpg"
+        "/assets/img3.webp"
       ]
     },
     {
@@ -229,8 +229,8 @@
       "local": "Online",
       "tags": ["Online", "Workshop", "Data Engineering"],
       "fotos": [
-        "/assets/radar_bsb.jpg",
-        "/assets/radar_bsb.jpg"
+        "/assets/img1.jpg",
+        "/assets/img2.jpg"
       ]
     },
     {
@@ -242,9 +242,9 @@
       "local": "Cuiabá, MT",
       "tags": ["Presencial", "Diversidade", "Painel"],
       "fotos": [
-        "/assets/radar_bsb.jpg",
-        "/assets/radar_bsb.jpg",
-        "/assets/radar_bsb.jpg"
+        "/assets/img3.webp",
+        "/assets/img1.jpg",
+        "/assets/img2.jpg"
       ]
     },
     {
@@ -256,7 +256,7 @@
       "local": "Cuiabá, MT",
       "tags": ["Presencial", "DataOps", "Qualidade"],
       "fotos": [
-        "/assets/radar_bsb.jpg"
+        "/assets/img2.jpg"
       ]
     }
   ],
@@ -289,9 +289,9 @@
   ],
 
   "parceiros": [
-    { "id": 1, "nome": "Parceiro 1", "logo": "", "url": "#" },
-    { "id": 2, "nome": "Parceiro 2", "logo": "", "url": "#" },
-    { "id": 3, "nome": "Parceiro 3", "logo": "", "url": "#" }
+    { "id": 1, "nome": "Astronomer", "logo": "/assets/Astronomer-Logo.png", "url": "#" },
+    { "id": 2, "nome": "Databricks", "logo": "/assets/Databricks-Logo.png", "url": "#" },
+    { "id": 3, "nome": "Microsoft",  "logo": "/assets/Microsoft-Logo.png",  "url": "#" }
   ],
 
   "social": [
