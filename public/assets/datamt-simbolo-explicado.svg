@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 520" width="960" height="520">
+  <defs>
+    <linearGradient id="shapeFill" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0" stop-color="#00F2FE"/>
+      <stop offset="0.5" stop-color="#4A7FFF"/>
+      <stop offset="1" stop-color="#7B2FFF"/>
+    </linearGradient>
+    <filter id="globalGlow" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="2.8" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <mask id="brainCut" maskUnits="userSpaceOnUse" x="50" y="50" width="300" height="300">
+      <rect x="50" y="50" width="300" height="300" fill="white"/>
+      <g transform="matrix(0.941,0,0,0.941,11.8,11.8)">
+        <path d="M 295.46,104.54 A 135,135 0 0,1 333.99,183.55" fill="none" stroke="black" stroke-width="6" stroke-linecap="round"/>
+        <path d="M 335.0,200.0 A 135,135 0 0,1 306.38,283.11" fill="none" stroke="black" stroke-width="6" stroke-linecap="round"/>
+        <path d="M 295.46,295.46 A 135,135 0 0,1 216.45,333.99" fill="none" stroke="black" stroke-width="6" stroke-linecap="round"/>
+        <path d="M 200.0,335.0 A 135,135 0 0,1 135.58,318.64 L 140.79,300.91 L 127.86,314.11 A 135,135 0 0,1 116.89,306.38" fill="none" stroke="black" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M 104.54,295.46 A 135,135 0 0,1 66.01,216.45" fill="none" stroke="black" stroke-width="6" stroke-linecap="round"/>
+        <path d="M 65.0,200.0 A 135,135 0 0,1 93.62,122.89" fill="none" stroke="black" stroke-width="6" stroke-linecap="round"/>
+        <path d="M 200.0,65.0 A 135,135 0 0,1 283.1,93.6" fill="none" stroke="black" stroke-width="6" stroke-linecap="round"/>
+      </g>
+      <g transform="matrix(1,0,0,1,66.022615,59)">
+        <path d="M 159 202 L 127 166 L 89 178 L 57 166 L 38 116 L 76 62 L 127 46 L 152 55 L 190 70 L 222 114 L 209 166 L 177 201" fill="none" stroke="black" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M 177 201 L 165 152 L 127 114 L 89 130 L 51 140" stroke="black" stroke-width="4" fill="none" stroke-linecap="round"/>
+        <path d="M 165 152 L 178 101 L 140 62 L 101 75 L 76 62" stroke="black" stroke-width="4" fill="none" stroke-linecap="round"/>
+        <path d="M 127 114 L 178 101" stroke="black" stroke-width="3" fill="none" stroke-linecap="round"/>
+        <path d="M 89 178 L 127 114" stroke="black" stroke-width="3" fill="none" stroke-linecap="round"/>
+        <path d="M 127 166 L 165 152" stroke="black" stroke-width="3" fill="none" stroke-linecap="round"/>
+        <path d="M 209 166 L 178 101" stroke="black" stroke-width="3" fill="none" stroke-linecap="round"/>
+        <path d="M 222 114 L 178 101" stroke="black" stroke-width="3" fill="none" stroke-linecap="round"/>
+        <g fill="none" stroke="black" stroke-width="2.5" stroke-dasharray="5 3" stroke-linecap="round">
+          <line x1="57" y1="166" x2="89" y2="130"/><line x1="38" y1="116" x2="89" y2="130"/>
+          <line x1="127" y1="46" x2="140" y2="62"/><line x1="190" y1="70" x2="178" y2="101"/>
+          <line x1="127" y1="166" x2="89" y2="130"/><line x1="209" y1="166" x2="165" y2="152"/>
+          <line x1="152" y1="55" x2="127" y2="114"/>
+        </g>
+        <circle cx="38"  cy="116" r="7"   fill="black"/><circle cx="76"  cy="62"  r="8"   fill="black"/>
+        <circle cx="127" cy="46"  r="7"   fill="black"/><circle cx="190" cy="70"  r="8.5" fill="black"/>
+        <circle cx="222" cy="114" r="7.5" fill="black"/><circle cx="209" cy="166" r="7"   fill="black"/>
+        <circle cx="57"  cy="166" r="7"   fill="black"/><circle cx="89"  cy="130" r="8"   fill="black"/>
+        <circle cx="178" cy="101" r="8.5" fill="black"/><circle cx="165" cy="152" r="8.5" fill="black"/>
+        <circle cx="89"  cy="178" r="7"   fill="black"/><circle cx="140" cy="62"  r="7"   fill="black"/>
+        <circle cx="127" cy="114" r="13"  fill="black"/>
+        <g transform="matrix(1.02136,0,0,0.992131,-2.775261,-6)">
+          <path d="M 155 210 L 155 254 C 155 262 177 262 177 254 L 177 210" fill="black"/>
+          <ellipse cx="166" cy="210" rx="11" ry="5.5" fill="black"/>
+          <path d="M 152 225 A 14 5 0 0 0 180 225" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+          <path d="M 152 240 A 14 5 0 0 0 180 240" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+          <path d="M 152 255.517 A 14 5.5 0 0 0 180 255.517" fill="none" stroke="white" stroke-width="2" stroke-linecap="round"/>
+          <circle cx="157" cy="220" r="2.5" fill="white"/><circle cx="157" cy="236" r="2.5" fill="white"/><circle cx="157" cy="252" r="2.5" fill="white"/>
+        </g>
+      </g>
+    </mask>
+  </defs>
+
+  <!-- fundo -->
+  <rect width="960" height="520" fill="#070B14" rx="16"/>
+
+  <!-- simbolo deslocado 40px para baixo para dar margem ao topo -->
+  <g transform="translate(0,40)">
+
+    <!-- circulo preenchido com mask -->
+    <g transform="matrix(0.941,0,0,0.941,11.8,11.8)" mask="url(#brainCut)">
+      <g transform="translate(200,200) scale(0.94) translate(-200,-200)">
+        <path d="M 199.0,66.0 A 135,135 0 0,1 283.1,93.6 L 295.46,104.54 A 135,135 0 0,1 333.99,183.55 L 335.0,200.0 A 135,135 0 0,1 306.38,283.11 L 295.46,295.46 A 135,135 0 0,1 216.45,333.99 L 200.0,335.0 A 135,135 0 0,1 135.58,318.64 L 140.79,300.91 L 127.86,314.11 A 135,135 0 0,1 116.89,306.38 L 104.54,295.46 A 135,135 0 0,1 66.01,216.45 L 65.0,200.0 A 135,135 0 0,1 95.99,122.89 Z"
+              fill="url(#shapeFill)"/>
+      </g>
+    </g>
+    <g transform="matrix(0.941,0,0,0.941,11.8,11.8)">
+      <g transform="matrix(1,0,0,1,66.022615,59)">
+        <circle cx="127" cy="114" r="7" fill="#4A7FFF" opacity="0.75" filter="url(#globalGlow)"/>
+      </g>
+    </g>
+
+    <!-- ======== SUB-LABELS 1.1–1.7 (na borda de cada segmento) ======== -->
+    <!-- posicionados na borda externa do anel, no meio de cada segmento -->
+
+    <!-- 1.1 Data Engineering — topo direito (334°) -->
+    <circle cx="330" cy="137" r="14" fill="#070B14" stroke="#00F2FE" stroke-width="1.2" fill-opacity="0.8"/>
+    <text x="330" y="142" text-anchor="middle" fill="#00F2FE" font-size="9.5" font-weight="bold" font-family="Inter,Segoe UI,sans-serif">1.1</text>
+
+    <!-- 1.2 AI Engineering — direita (19°) -->
+    <circle cx="337" cy="247" r="14" fill="#070B14" stroke="#4FACFE" stroke-width="1.2" fill-opacity="0.8"/>
+    <text x="337" y="252" text-anchor="middle" fill="#4FACFE" font-size="9.5" font-weight="bold" font-family="Inter,Segoe UI,sans-serif">1.2</text>
+
+    <!-- 1.3 ML & Data Science — baixo direito (64°) -->
+    <circle cx="264" cy="330" r="14" fill="#070B14" stroke="#2D6BFF" stroke-width="1.2" fill-opacity="0.8"/>
+    <text x="264" y="335" text-anchor="middle" fill="#2D6BFF" font-size="9.5" font-weight="bold" font-family="Inter,Segoe UI,sans-serif">1.3</text>
+
+    <!-- 1.4 Analytics & BI / MT — baixo (109°) -->
+    <circle cx="153" cy="337" r="14" fill="#070B14" stroke="#5B4FE8" stroke-width="1.2" fill-opacity="0.8"/>
+    <text x="153" y="342" text-anchor="middle" fill="#9B8FFF" font-size="9.5" font-weight="bold" font-family="Inter,Segoe UI,sans-serif">1.4</text>
+
+    <!-- 1.5 Cloud — esquerda baixo (154°) -->
+    <circle cx="70" cy="264" r="14" fill="#070B14" stroke="#7B2FFF" stroke-width="1.2" fill-opacity="0.8"/>
+    <text x="70" y="269" text-anchor="middle" fill="#7B2FFF" font-size="9.5" font-weight="bold" font-family="Inter,Segoe UI,sans-serif">1.5</text>
+
+    <!-- 1.6 Governança — esquerda (198°) -->
+    <circle cx="62" cy="155" r="14" fill="#070B14" stroke="#6A1FDD" stroke-width="1.2" fill-opacity="0.8"/>
+    <text x="62" y="160" text-anchor="middle" fill="#6A1FDD" font-size="9.5" font-weight="bold" font-family="Inter,Segoe UI,sans-serif">1.6</text>
+
+    <!-- 1.7 Carreira — topo (289°) -->
+    <circle cx="247" cy="63" r="14" fill="#070B14" stroke="#4A1FA8" stroke-width="1.2" fill-opacity="0.8"/>
+    <text x="247" y="68" text-anchor="middle" fill="#8866CC" font-size="9.5" font-weight="bold" font-family="Inter,Segoe UI,sans-serif">1.7</text>
+
+    <!-- ======== CALLOUTS PRINCIPAIS ======== -->
+
+    <!-- 1: Anel — borda direita -->
+    <line x1="316" y1="193" x2="362" y2="193" stroke="#00F2FE" stroke-width="1.2" stroke-dasharray="5 3" opacity="0.6"/>
+    <circle cx="374" cy="193" r="13" fill="#00F2FE" fill-opacity="0.12" stroke="#00F2FE" stroke-width="1.5"/>
+    <text x="374" y="198" text-anchor="middle" fill="#00F2FE" font-size="13" font-weight="bold" font-family="Inter,Segoe UI,sans-serif">1</text>
+
+    <!-- 2: Segmento MT — chevron -->
+    <line x1="130" y1="300" x2="68" y2="300" stroke="#5B4FE8" stroke-width="1.2" stroke-dasharray="5 3" opacity="0.6"/>
+    <circle cx="56" cy="300" r="13" fill="#5B4FE8" fill-opacity="0.12" stroke="#5B4FE8" stroke-width="1.5"/>
+    <text x="56" y="305" text-anchor="middle" fill="#9B8FFF" font-size="13" font-weight="bold" font-family="Inter,Segoe UI,sans-serif">2</text>
+
+    <!-- 3: Linha reta / lacuna — diagonal -->
+    <line x1="148" y1="103" x2="82" y2="70" stroke="#FFB300" stroke-width="1.2" stroke-dasharray="5 3" opacity="0.6"/>
+    <circle cx="70" cy="62" r="13" fill="#FFB300" fill-opacity="0.12" stroke="#FFB300" stroke-width="1.5"/>
+    <text x="70" y="67" text-anchor="middle" fill="#FFB300" font-size="13" font-weight="bold" font-family="Inter,Segoe UI,sans-serif">3</text>
+
+    <!-- 4: Cérebro -->
+    <line x1="184" y1="150" x2="362" y2="113" stroke="#4FACFE" stroke-width="1.2" stroke-dasharray="5 3" opacity="0.6"/>
+    <circle cx="374" cy="108" r="13" fill="#4FACFE" fill-opacity="0.12" stroke="#4FACFE" stroke-width="1.5"/>
+    <text x="374" y="113" text-anchor="middle" fill="#4FACFE" font-size="13" font-weight="bold" font-family="Inter,Segoe UI,sans-serif">4</text>
+
+    <!-- 5: Cilindro -->
+    <line x1="235" y1="275" x2="362" y2="294" stroke="#7B2FFF" stroke-width="1.2" stroke-dasharray="5 3" opacity="0.6"/>
+    <circle cx="374" cy="299" r="13" fill="#7B2FFF" fill-opacity="0.12" stroke="#7B2FFF" stroke-width="1.5"/>
+    <text x="374" y="304" text-anchor="middle" fill="#9B5FFF" font-size="13" font-weight="bold" font-family="Inter,Segoe UI,sans-serif">5</text>
+
+  </g><!-- fim translate(0,40) -->
+
+  <!-- ======== DIVISOR ======== -->
+  <line x1="410" y1="22" x2="410" y2="498" stroke="#1A2545" stroke-width="1"/>
+
+  <!-- ======== PAINEL DIREITO ======== -->
+  <text x="430" y="46" fill="#FFFFFF" font-family="Inter,Segoe UI,sans-serif" font-size="17" font-weight="800" letter-spacing="0.5">DATA MT — Anatomia do Símbolo</text>
+  <line x1="430" y1="55" x2="944" y2="55" stroke="#1A2545" stroke-width="1"/>
+
+  <!-- item 1: Anel -->
+  <circle cx="448" cy="78" r="13" fill="#00F2FE" fill-opacity="0.12" stroke="#00F2FE" stroke-width="1.5"/>
+  <text x="448" y="83" text-anchor="middle" fill="#00F2FE" font-size="13" font-weight="bold" font-family="Inter,Segoe UI,sans-serif">1</text>
+  <text x="470" y="72" fill="#00F2FE" font-family="Inter,Segoe UI,sans-serif" font-size="13" font-weight="700">Os 7 Segmentos — Os 7 Pilares</text>
+  <text x="470" y="89" fill="#7A8EAA" font-family="Inter,Segoe UI,sans-serif" font-size="11">As lacunas de cada segmento formam protuberâncias na extremidade</text>
+  <text x="470" y="103" fill="#7A8EAA" font-family="Inter,Segoe UI,sans-serif" font-size="11">do círculo — cada pilar deixa sua marca na forma do símbolo.</text>
+  <text x="470" y="119" fill="#00F2FE" font-family="Inter,Segoe UI,sans-serif" font-size="10.5" font-weight="600">1.1</text><text x="486" y="119" fill="#445570" font-family="Inter,Segoe UI,sans-serif" font-size="10.5"> Data Engineering</text>
+  <text x="660" y="119" fill="#4FACFE" font-family="Inter,Segoe UI,sans-serif" font-size="10.5" font-weight="600">1.2</text><text x="676" y="119" fill="#445570" font-family="Inter,Segoe UI,sans-serif" font-size="10.5"> AI Engineering &amp; Applied AI</text>
+  <text x="470" y="133" fill="#2D6BFF" font-family="Inter,Segoe UI,sans-serif" font-size="10.5" font-weight="600">1.3</text><text x="486" y="133" fill="#445570" font-family="Inter,Segoe UI,sans-serif" font-size="10.5"> ML &amp; Data Science</text>
+  <text x="660" y="133" fill="#7B6FFF" font-family="Inter,Segoe UI,sans-serif" font-size="10.5" font-weight="600">1.4</text><text x="676" y="133" fill="#445570" font-family="Inter,Segoe UI,sans-serif" font-size="10.5"> Analytics &amp; BI</text>
+  <text x="470" y="147" fill="#7B2FFF" font-family="Inter,Segoe UI,sans-serif" font-size="10.5" font-weight="600">1.5</text><text x="486" y="147" fill="#445570" font-family="Inter,Segoe UI,sans-serif" font-size="10.5"> Cloud &amp; Plataformas</text>
+  <text x="660" y="147" fill="#6A1FDD" font-family="Inter,Segoe UI,sans-serif" font-size="10.5" font-weight="600">1.6</text><text x="676" y="147" fill="#445570" font-family="Inter,Segoe UI,sans-serif" font-size="10.5"> Governança &amp; Qualidade</text>
+  <text x="470" y="161" fill="#8866CC" font-family="Inter,Segoe UI,sans-serif" font-size="10.5" font-weight="600">1.7</text><text x="486" y="161" fill="#445570" font-family="Inter,Segoe UI,sans-serif" font-size="10.5"> Carreira &amp; Comunidade</text>
+  <line x1="430" y1="173" x2="944" y2="173" stroke="#111828" stroke-width="1"/>
+
+  <!-- item 2: MT -->
+  <circle cx="448" cy="194" r="13" fill="#5B4FE8" fill-opacity="0.12" stroke="#5B4FE8" stroke-width="1.5"/>
+  <text x="448" y="199" text-anchor="middle" fill="#9B8FFF" font-size="13" font-weight="bold" font-family="Inter,Segoe UI,sans-serif">2</text>
+  <text x="470" y="188" fill="#9B8FFF" font-family="Inter,Segoe UI,sans-serif" font-size="13" font-weight="700">Segmento MT (1.4) — Identidade Regional</text>
+  <text x="470" y="205" fill="#7A8EAA" font-family="Inter,Segoe UI,sans-serif" font-size="11">O segmento 1.4 é um dos 7 — não é mais especial que os outros.</text>
+  <text x="470" y="220" fill="#7A8EAA" font-family="Inter,Segoe UI,sans-serif" font-size="11">O chevron ▲ recortado no segmento lembra a parte superior do mapa</text>
+  <text x="470" y="235" fill="#7A8EAA" font-family="Inter,Segoe UI,sans-serif" font-size="11">de Mato Grosso — característica reconhecível do nosso estado —</text>
+  <text x="470" y="250" fill="#7A8EAA" font-family="Inter,Segoe UI,sans-serif" font-size="11">unindo o pilar técnico à identidade regional da comunidade.</text>
+  <line x1="430" y1="262" x2="944" y2="262" stroke="#111828" stroke-width="1"/>
+
+  <!-- item 3: Linha reta -->
+  <circle cx="448" cy="282" r="13" fill="#FFB300" fill-opacity="0.12" stroke="#FFB300" stroke-width="1.5"/>
+  <text x="448" y="287" text-anchor="middle" fill="#FFB300" font-size="13" font-weight="bold" font-family="Inter,Segoe UI,sans-serif">3</text>
+  <text x="470" y="276" fill="#FFB300" font-family="Inter,Segoe UI,sans-serif" font-size="13" font-weight="700">Linha Reta — Abertura ao Novo</text>
+  <text x="470" y="293" fill="#7A8EAA" font-family="Inter,Segoe UI,sans-serif" font-size="11">A linha reta não é uma borda — é uma lacuna no círculo.</text>
+  <text x="470" y="308" fill="#7A8EAA" font-family="Inter,Segoe UI,sans-serif" font-size="11">O anel não se fecha: os pilares estão abertos a novos conhecimentos,</text>
+  <text x="470" y="323" fill="#7A8EAA" font-family="Inter,Segoe UI,sans-serif" font-size="11">novas áreas e novas comunidades.</text>
+  <line x1="430" y1="336" x2="944" y2="336" stroke="#111828" stroke-width="1"/>
+
+  <!-- item 4: Cérebro -->
+  <circle cx="448" cy="357" r="13" fill="#4FACFE" fill-opacity="0.12" stroke="#4FACFE" stroke-width="1.5"/>
+  <text x="448" y="362" text-anchor="middle" fill="#4FACFE" font-size="13" font-weight="bold" font-family="Inter,Segoe UI,sans-serif">4</text>
+  <text x="470" y="351" fill="#4FACFE" font-family="Inter,Segoe UI,sans-serif" font-size="13" font-weight="700">Rede Neural — Cérebro</text>
+  <text x="470" y="368" fill="#7A8EAA" font-family="Inter,Segoe UI,sans-serif" font-size="11">Representa Inteligência Artificial e o senso de rede e comunidade.</text>
+  <text x="470" y="383" fill="#7A8EAA" font-family="Inter,Segoe UI,sans-serif" font-size="11">Os nós e conexões refletem como os membros se conectam.</text>
+  <line x1="430" y1="396" x2="944" y2="396" stroke="#111828" stroke-width="1"/>
+
+  <!-- item 5: Cilindro -->
+  <circle cx="448" cy="417" r="13" fill="#7B2FFF" fill-opacity="0.12" stroke="#7B2FFF" stroke-width="1.5"/>
+  <text x="448" y="422" text-anchor="middle" fill="#9B5FFF" font-size="13" font-weight="bold" font-family="Inter,Segoe UI,sans-serif">5</text>
+  <text x="470" y="411" fill="#9B5FFF" font-family="Inter,Segoe UI,sans-serif" font-size="13" font-weight="700">Banco de Dados — Tronco Encefálico</text>
+  <text x="470" y="428" fill="#7A8EAA" font-family="Inter,Segoe UI,sans-serif" font-size="11">O cilindro conectado ao cérebro mostra que, apesar de tudo ter</text>
+  <text x="470" y="443" fill="#7A8EAA" font-family="Inter,Segoe UI,sans-serif" font-size="11">evoluído, a base ainda são os dados. A fundação não muda.</text>
+
+  <!-- rodapé -->
+  <line x1="430" y1="464" x2="944" y2="464" stroke="#1A2545" stroke-width="1"/>
+  <text x="430" y="482" fill="#2A3A5A" font-family="Inter,Segoe UI,sans-serif" font-size="10">DATA MT — Comunidade Técnica de Dados de Mato Grosso</text>
+  <text x="944" y="482" text-anchor="end" fill="#2A3A5A" font-family="Inter,Segoe UI,sans-serif" font-size="10">datamt.com.br</text>
+
+</svg>
