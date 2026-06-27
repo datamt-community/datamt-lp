@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion'
+import assetUrl from '../assetUrl'
 
 export default function Parceiros({ parceiros }) {
   if (!parceiros?.length) return null
@@ -42,7 +43,7 @@ export default function Parceiros({ parceiros }) {
             >
               {parceiro.logo ? (
                 <img
-                  src={parceiro.logo}
+                  src={assetUrl(parceiro.logo)}
                   alt={parceiro.nome}
                   className="absolute inset-0 w-full h-full object-contain p-4"
                 />

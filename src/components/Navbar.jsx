@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
+import assetUrl from '../assetUrl'
 
 export default function Navbar({ nav, site }) {
   const [noTopo, setNoTopo] = useState(true)
@@ -30,13 +31,13 @@ export default function Navbar({ nav, site }) {
         {/* Logo */}
         <a href="#" className="group flex items-center gap-2" onClick={fecharMenu}>
           <img
-            src="/assets/datamt-simbolo.svg"
+            src={assetUrl('/assets/datamt-simbolo.svg')}
             alt=""
             style={{ height: '52px', width: '52px', display: 'block' }}
             className="transition-opacity group-hover:opacity-80"
           />
           <img
-            src="/assets/datamt-titulo.svg"
+            src={assetUrl('/assets/datamt-titulo.svg')}
             alt="DATA MT"
             style={{ height: '34px', width: 'auto' }}
             className="transition-opacity group-hover:opacity-80"

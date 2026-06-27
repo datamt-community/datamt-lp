@@ -1,5 +1,6 @@
 import { motion, AnimatePresence } from 'framer-motion'
 import { useState, useEffect } from 'react'
+import assetUrl from '../assetUrl'
 
 export default function LogoIntro({ onComplete }) {
   const [fase, setFase] = useState(0)
@@ -41,7 +42,7 @@ export default function LogoIntro({ onComplete }) {
         transition={{ duration: 0.8, delay: 0.2 }}
       >
         <motion.img
-          src="/assets/datamt-logo-completa.svg"
+          src={assetUrl('/assets/datamt-logo-completa.svg')}
           alt="DATA MT"
           className="h-20"
           initial={{ opacity: 0, scale: 0.9 }}
@@ -66,7 +67,7 @@ export default function LogoIntro({ onComplete }) {
           >
             {/* Símbolo */}
             <motion.img
-              src="/assets/datamt-simbolo.svg"
+              src={assetUrl('/assets/datamt-simbolo.svg')}
               alt="DATA MT símbolo"
               initial={{ opacity: 0, scale: 1.3 }}
               animate={{ opacity: 1, scale: 1 }}
@@ -78,7 +79,7 @@ export default function LogoIntro({ onComplete }) {
             {fase >= 2 && (
               <div className="flex items-center mt-6 overflow-hidden">
                 <motion.img
-                  src="/assets/datamt-titulo.svg"
+                  src={assetUrl('/assets/datamt-titulo.svg')}
                   alt="DATA MT"
                   initial={{ opacity: 0, x: -60 }}
                   animate={{ opacity: 1, x: 0 }}
@@ -91,7 +92,7 @@ export default function LogoIntro({ onComplete }) {
             {/* Slogan */}
             {fase >= 3 && (
               <motion.img
-                src="/assets/datamt-slogan.svg"
+                src={assetUrl('/assets/datamt-slogan.svg')}
                 alt="Comunidade Técnica de Dados"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -115,7 +116,7 @@ export default function LogoIntro({ onComplete }) {
             transition={{ duration: 0.6, ease: 'easeOut' }}
           >
             <motion.img
-              src="/assets/datamt-simbolo.svg"
+              src={assetUrl('/assets/datamt-simbolo.svg')}
               alt="DATA MT símbolo"
               className="w-24 h-24 md:w-32 md:h-32"
               initial={{ x: 40 }}
@@ -124,7 +125,7 @@ export default function LogoIntro({ onComplete }) {
             />
             <div className="flex flex-col gap-2">
               <motion.img
-                src="/assets/datamt-titulo.svg"
+                src={assetUrl('/assets/datamt-titulo.svg')}
                 alt="DATA MT"
                 className="h-10 md:h-14"
                 initial={{ x: -40 }}
@@ -132,7 +133,7 @@ export default function LogoIntro({ onComplete }) {
                 transition={{ duration: 0.6, ease: 'easeOut' }}
               />
               <motion.img
-                src="/assets/datamt-slogan.svg"
+                src={assetUrl('/assets/datamt-slogan.svg')}
                 alt="Comunidade Técnica de Dados"
                 className="h-4 md:h-5 opacity-70"
                 initial={{ opacity: 0 }}

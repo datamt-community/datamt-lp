@@ -1,4 +1,5 @@
 import { motion, useTransform } from 'framer-motion'
+import assetUrl from '../assetUrl'
 
 const RING_PATHS = [
   { d: 'M 295.46,104.54 A 135,135 0 0,1 333.99,183.55', color: '#00F2FE', start: 0.1, end: 0.28 },
@@ -43,7 +44,7 @@ function RingHideStroke({ d }) {
 export default function DatamtSymbolRingProgress({ progress, className = '' }) {
   return (
     <div className={`relative ${className}`}>
-      <img src="/assets/datamt-simbolo.svg" alt="DATA MT símbolo" className="h-full w-full" />
+      <img src={assetUrl('/assets/datamt-simbolo.svg')} alt="DATA MT símbolo" className="h-full w-full" />
 
       <svg
         aria-hidden="true"

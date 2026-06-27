@@ -1,6 +1,7 @@
 import { useMemo, useState } from 'react'
 import { motion } from 'framer-motion'
 import { MapPin, Calendar, ExternalLink, ChevronLeft, ChevronRight } from 'lucide-react'
+import assetUrl from '../assetUrl'
 
 export default function EventoCard({ evento, index, isPast = false }) {
   const photos = useMemo(() => evento.fotos ?? [], [evento.fotos])
@@ -60,7 +61,7 @@ export default function EventoCard({ evento, index, isPast = false }) {
           {hasPhotos ? (
             <>
               <img
-                src={photos[photoIndex]}
+                src={assetUrl(photos[photoIndex])}
                 alt={`${evento.titulo} - foto ${photoIndex + 1}`}
                 className="h-full w-full object-cover"
               />

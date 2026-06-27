@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion'
 import { AtSign, Link } from 'lucide-react'
+import assetUrl from '../assetUrl'
 
 function iniciais(nome) {
   return nome
@@ -24,7 +25,7 @@ export default function OrganizerCard({ org, index }) {
       {/* Foto ou iniciais */}
       {org.foto ? (
         <img
-          src={org.foto}
+          src={assetUrl(org.foto)}
           alt={org.nome}
           className="w-20 h-20 rounded-full object-cover mb-5 border-2 border-datamt-border group-hover:border-datamt-cyan/60 transition-colors"
         />
