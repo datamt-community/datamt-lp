@@ -18,13 +18,6 @@
   </defs>
   <g id="simbolo">
     <circle id="simbolo-glow" cx="200" cy="200" r="150" fill="url(#coreGlow)"/>
-    <g id="decoracoes-externas">
-      <circle cx="122" cy="130" r="3.5" fill="#00F2FE"/>
-      <circle cx="278" cy="270" r="3.5" fill="#F355FF"/>
-      <circle cx="129.186" cy="274.252" r="4" fill="#FFB300"/>
-      <path d="M 85 170 L 75 175 L 85 180" fill="none" stroke="#334155" stroke-width="2" stroke-linecap="round"/>
-      <path d="M 315 220 L 325 225 L 315 230" fill="none" stroke="#334155" stroke-width="2" stroke-linecap="round"/>
-    </g>
     <g id="anel-pilares" transform="matrix(0.940956,0,0,0.941408,11.654505,10.84766)">
       <path d="M 295.46,104.54 A 135,135 0 0,1 333.99,183.55" fill="none" stroke="#00F2FE" stroke-width="6" stroke-linecap="round"/>
       <path d="M 335.0,200.0 A 135,135 0 0,1 306.38,283.11" fill="none" stroke="#4FACFE" stroke-width="6" stroke-linecap="round"/>
@@ -83,9 +76,12 @@
           <path d="M 180 210 C 182 225.266 182 240.533 180 255.799" fill="none" stroke="url(#dbStroke)" stroke-width="2.5" stroke-linecap="round"/>
           <ellipse cx="166" cy="210" rx="14" ry="5.5" fill="url(#dbFill)" stroke="#00F2FE" stroke-width="2.5" filter="url(#dbGlow)"/>
           <path d="M 156 208 Q 166 206 174 208" fill="none" stroke="#FFFFFF" stroke-width="1.2" opacity="0.4" stroke-linecap="round"/>
+          <circle cx="155" cy="217" r="2.5" fill="#2D6BFF"/>
           <path d="M 152 224 A 14 5 0 0 0 180 224" fill="none" stroke="#2D6BFF" stroke-width="2" stroke-linecap="round"/>
+          <circle cx="155" cy="231" r="2.5" fill="#5B4FE8"/>
           <path d="M 152 238 A 14 5 0 0 0 180 238" fill="none" stroke="#5B4FE8" stroke-width="2" stroke-linecap="round"/>
-          <ellipse cx="166" cy="255.517" rx="14" ry="5.5" fill="url(#dbFill)" stroke="#7B2FFF" stroke-width="2"/>
+          <circle cx="155" cy="247" r="2.5" fill="#7B2FFF"/>
+          <path d="M 152 255.517 A 14 5.5 0 0 0 180 255.517" fill="none" stroke="#7B2FFF" stroke-width="2" stroke-linecap="round"/>
         </g>
         <g filter="url(#dbNodeGlow)" transform="matrix(1,0,0,1,-0.242854,4.128591)">
           <circle cx="155" cy="201" r="4.5" fill="#FFFFFF" stroke="#00F2FE" stroke-width="1.5"/>
