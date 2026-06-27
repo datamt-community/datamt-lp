@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 240" width="260" height="240" preserveAspectRatio="xMidYMid meet">
+  <defs>
+    <linearGradient id="edgeMain" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00F2FE"/>
+      <stop offset="100%" stop-color="#4A1FA8"/>
+    </linearGradient>
+    <filter id="softGlow" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="2.8" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="nodeGlow" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="2.1" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Contorno externo -->
+  <path d="M 155 201 L 127 166 L 89 178 L 57 166 L 38 116 L 76 62 L 127 46 L 152 55 L 190 70 L 222 114 L 209 166 L 177 201"
+        fill="none" stroke="url(#edgeMain)" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"
+        filter="url(#softGlow)"/>
+
+  <!-- Conexões primárias -->
+  <path d="M 177 201 L 165 152 L 127 114 L 89 130 L 51 140" fill="none" stroke="url(#edgeMain)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 165 152 L 178 101 L 140 62 L 101 75 L 76 62"  fill="none" stroke="#9B30FF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 127 114 L 178 101" fill="none" stroke="#9B30FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 89 178 L 127 114"  fill="none" stroke="#2D6BFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 127 166 L 165 152" fill="none" stroke="#2D6BFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 209 166 L 178 101" fill="none" stroke="#9B30FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 222 114 L 178 101" fill="none" stroke="#9B30FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Nós -->
+  <circle cx="38"  cy="116" r="5"   fill="#070B14" stroke="#00F2FE" stroke-width="1.8" filter="url(#nodeGlow)"/>
+  <circle cx="76"  cy="62"  r="6"   fill="#070B14" stroke="#00F2FE" stroke-width="1.8" filter="url(#nodeGlow)"/>
+  <circle cx="127" cy="46"  r="5"   fill="#070B14" stroke="#00F2FE" stroke-width="1.8" filter="url(#nodeGlow)"/>
+  <circle cx="190" cy="70"  r="6.5" fill="#070B14" stroke="#00F2FE" stroke-width="1.8" filter="url(#nodeGlow)"/>
+  <circle cx="222" cy="114" r="5.5" fill="#070B14" stroke="#00F2FE" stroke-width="1.8" filter="url(#nodeGlow)"/>
+  <circle cx="209" cy="166" r="5"   fill="#070B14" stroke="#00F2FE" stroke-width="1.8" filter="url(#nodeGlow)"/>
+  <circle cx="57"  cy="166" r="5"   fill="#070B14" stroke="#00F2FE" stroke-width="1.8" filter="url(#nodeGlow)"/>
+  <circle cx="89"  cy="130" r="6"   fill="#070B14" stroke="#9B30FF" stroke-width="1.8" filter="url(#nodeGlow)"/>
+  <circle cx="178" cy="101" r="6.5" fill="#070B14" stroke="#9B30FF" stroke-width="1.8" filter="url(#nodeGlow)"/>
+  <circle cx="165" cy="152" r="6.5" fill="#070B14" stroke="#2D6BFF" stroke-width="1.8" filter="url(#nodeGlow)"/>
+  <circle cx="127" cy="114" r="5.5" fill="#070B14" stroke="#9B30FF" stroke-width="1.8" filter="url(#nodeGlow)"/>
+  <circle cx="89"  cy="178" r="5"   fill="#070B14" stroke="#2D6BFF" stroke-width="1.8" filter="url(#nodeGlow)"/>
+  <circle cx="140" cy="62"  r="5"   fill="#070B14" stroke="#9B30FF" stroke-width="1.8" filter="url(#nodeGlow)"/>
+
+  <!-- Nó central -->
+  <circle cx="127" cy="114" r="10" fill="#070B14" stroke="#6A1FDD" stroke-width="2.5" filter="url(#nodeGlow)"/>
+  <circle cx="127" cy="114" r="6"  fill="rgba(255,255,255,0.9)" filter="url(#nodeGlow)"/>
+</svg>
