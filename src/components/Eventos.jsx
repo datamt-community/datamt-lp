@@ -97,7 +97,7 @@ function SpiralPastTimeline({ eventosPassados }) {
   return (
     <div ref={spiralRef} className="relative" style={{ height: `${Math.max(260, totalPast * 120)}vh` }}>
       <div className="sticky top-0 h-screen overflow-hidden">
-        <div className="absolute right-3 top-1/2 z-30 -translate-y-1/2 flex flex-col gap-2">
+        <div className="absolute right-3 top-1/2 z-[1010] -translate-y-1/2 flex flex-col gap-2">
           <button
             type="button"
             onClick={jumpToFirst}
