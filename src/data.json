@@ -107,6 +107,39 @@
     }
   ],
 
+  "eventosPassados": [
+    {
+      "id": 1,
+      "titulo": "SQL MT Meetup #1 — O início",
+      "data": "2023-11-10",
+      "dataFormatada": "10 Nov 2023",
+      "descricao": "Primeiro encontro da comunidade ainda como SQLMT. Reunimos profissionais de dados de Cuiabá para discutir o ecossistema local.",
+      "local": "Cuiabá, MT",
+      "tags": ["Presencial", "Gratuito"],
+      "fotos": []
+    },
+    {
+      "id": 2,
+      "titulo": "Workshop Power BI do Zero",
+      "data": "2024-02-20",
+      "dataFormatada": "20 Fev 2024",
+      "descricao": "Workshop prático de Power BI para iniciantes. Mais de 40 participantes aprenderam a criar dashboards do zero.",
+      "local": "Online",
+      "tags": ["Online", "Gratuito", "Workshop"],
+      "fotos": []
+    },
+    {
+      "id": 3,
+      "titulo": "SQLMT vira DATA MT",
+      "data": "2024-06-15",
+      "dataFormatada": "15 Jun 2024",
+      "descricao": "Meetup especial que marcou a transição da comunidade de SQLMT para DATA MT, refletindo nossa expansão além do SQL.",
+      "local": "Cuiabá, MT",
+      "tags": ["Presencial", "Gratuito", "Marco"],
+      "fotos": []
+    }
+  ],
+
   "organizadores": [
     {
       "id": 1,

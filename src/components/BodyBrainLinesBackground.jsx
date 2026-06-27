@@ -40,7 +40,7 @@ function PathReveal({ progress, d, color, width, start, end }) {
       strokeLinecap="round"
       style={{
         pathLength: useTransform(progress, [start, end], [0, 1]),
-        opacity: useTransform(progress, [start, start + 0.01, end], [0, 0.48, 0.62])
+        opacity: useTransform(progress, [start, start + 0.01, end], [0, 0.62, 0.85])
       }}
       filter="url(#globalGlow)"
     />
@@ -57,8 +57,8 @@ function NodeReveal({ progress, node, at, color, radius }) {
       stroke={color}
       strokeWidth="1.7"
       style={{
-        opacity: useTransform(progress, [at - 0.05, at + 0.06], [0, 0.9]),
-        scale: useTransform(progress, [at - 0.05, at, at + 0.08], [0.35, 1.28, 1])
+        opacity: useTransform(progress, [at - 0.05, at + 0.06], [0, 1]),
+        scale: useTransform(progress, [at - 0.05, at, at + 0.08], [0.35, 1.35, 1])
       }}
       filter="url(#globalGlow)"
     />
@@ -67,12 +67,12 @@ function NodeReveal({ progress, node, at, color, radius }) {
 
 export default function BodyBrainLinesBackground({ progress }) {
   return (
-    <div aria-hidden="true" className="pointer-events-none fixed inset-0 z-0 overflow-hidden">
+    <div aria-hidden="true" className="pointer-events-none fixed inset-0 z-20 overflow-hidden">
       <motion.svg
         viewBox="0 0 1200 900"
         preserveAspectRatio="xMidYMid slice"
         className="h-full w-full"
-        style={{ opacity: useTransform(progress, [0, 0.15, 1], [0.08, 0.22, 0.38]) }}
+        style={{ opacity: useTransform(progress, [0, 0.15, 1], [0.14, 0.3, 0.52]) }}
       >
         <defs>
           <filter id="globalGlow" x="-80%" y="-80%" width="260%" height="260%">

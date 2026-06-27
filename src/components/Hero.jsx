@@ -1,11 +1,11 @@
 import { useRef } from 'react'
-import { motion, useTransform, useMotionValue, useSpring } from 'framer-motion'
+import { motion, useTransform, useMotionValue, useSpring, useScroll } from 'framer-motion'
 import ScrollBrainBackground from './ScrollBrainBackground'
 import DatamtSymbolRingProgress from './DatamtSymbolRingProgress'
 
 function ScrollWord({ word, index, total, progress }) {
-  const start = 0.12 + (index / total) * 0.68
-  const end = start + 0.08
+  const start = 0.2 + (index / total) * 0.58
+  const end = start + 0.1
   const opacity = useTransform(progress, [start, end], [0, 1])
   const y = useTransform(progress, [start, end], [10, 0])
 
@@ -26,7 +26,10 @@ const fadeUp = {
 
 export default function Hero({ hero, progress }) {
   const sectionRef = useRef(null)
-  const scrollYProgress = progress
+  const { scrollYProgress: pageScrollYProgress } = useScroll()
+  const fallbackProgress = useTransform(pageScrollYProgress, [0, 0.35], [0, 1], { clamp: true })
+  const scrollYProgress = progress ?? fallbackProgress
+  const smoothScrollYProgress = useSpring(scrollYProgress, { stiffness: 120, damping: 28, mass: 0.25 })
 
   const rawX = useMotionValue(-9999)
   const rawY = useMotionValue(-9999)
@@ -45,13 +48,14 @@ export default function Hero({ hero, progress }) {
     rawY.set(-9999)
   }
 
-  const titleY = useTransform(scrollYProgress, [0, 1], [0, -70])
-  const titleOpacity = useTransform(scrollYProgress, [0, 1], [1, 0.72])
-  const manifestoGlow = useTransform(scrollYProgress, [0.1, 0.93], [0.2, 1])
+  const titleY = useTransform(smoothScrollYProgress, [0, 1], [0, -70])
+  const titleOpacity = useTransform(smoothScrollYProgress, [0, 1], [1, 0.72])
+  const manifestoGlow = useTransform(smoothScrollYProgress, [0.22, 0.93], [0.1, 1])
+  const manifestoOpacity = useTransform(smoothScrollYProgress, [0.12, 0.22], [0, 1])
   const manifestoWords = (hero.manifesto ?? '').split(' ')
 
-  const manifestoLift = useTransform(scrollYProgress, [0, 1], [0, -16])
-  const logoOpacity = useTransform(scrollYProgress, [0.03, 0.2], [0.4, 1])
+  const manifestoLift = useTransform(smoothScrollYProgress, [0, 1], [0, -16])
+  const logoOpacity = useTransform(smoothScrollYProgress, [0.03, 0.2], [0.4, 1])
 
   return (
     <section
@@ -150,12 +154,8 @@ export default function Hero({ hero, progress }) {
         </motion.h1>
 
         <motion.div
-          custom={0}
-          variants={fadeUp}
-          initial="hidden"
-          animate="visible"
           className="mb-8"
-          style={{ y: manifestoLift }}
+          style={{ y: manifestoLift, opacity: manifestoOpacity }}
         >
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-datamt-border bg-datamt-surface text-datamt-muted text-sm mb-4">
             <span className="w-2 h-2 rounded-full bg-datamt-cyan animate-pulse" />
@@ -174,7 +174,7 @@ export default function Hero({ hero, progress }) {
                 word={word}
                 index={index}
                 total={manifestoWords.length}
-                progress={scrollYProgress}
+                progress={smoothScrollYProgress}
               />
             ))}
           </motion.p>
@@ -222,7 +222,7 @@ export default function Hero({ hero, progress }) {
               <a
                 key={cta.href}
                 href={cta.href}
-                className="px-8 py-3.5 rounded-xl font-semibold border border-datamt-border bg-black/35 text-white hover:border-datamt-cyan hover:text-datamt-cyan hover:bg-black/45 transition-all duration-200"
+                className="px-8 py-3.5 rounded-xl font-semibold border border-slate-200/35 bg-datamt-bg/75 backdrop-blur-sm text-white shadow-[0_6px_24px_rgba(7,11,20,0.45)] hover:border-datamt-cyan hover:text-datamt-cyan hover:bg-datamt-bg/85 transition-all duration-200"
               >
                 {cta.label}
               </a>

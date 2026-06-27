@@ -2,10 +2,10 @@ import { motion, useTransform } from 'framer-motion'
 import BrainSvgProgress from './BrainSvgProgress'
 
 export default function ScrollBrainBackground({ progress }) {
-  const groupOpacity = useTransform(progress, [0, 1], [0.05, 0.2])
+  const groupOpacity = useTransform(progress, [0, 1], [0.1, 0.3])
   const groupScale = useTransform(progress, [0, 1], [2.5, 3.2])
   const groupRotate = useTransform(progress, [0, 1], [-3, 4])
-  const bgPulse = useTransform(progress, [0, 0.5, 1], [0.05, 0.1, 0.065])
+  const bgPulse = useTransform(progress, [0, 0.5, 1], [0.08, 0.15, 0.1])
 
   return (
     <div aria-hidden="true" className="absolute inset-0 pointer-events-none overflow-hidden">
@@ -13,7 +13,7 @@ export default function ScrollBrainBackground({ progress }) {
         className="absolute inset-0"
         style={{
           background:
-            'radial-gradient(55% 45% at 50% 42%, rgba(0,242,254,0.12), rgba(7,11,20,0) 60%), radial-gradient(48% 40% at 52% 54%, rgba(123,47,255,0.1), rgba(7,11,20,0) 72%)',
+            'radial-gradient(55% 45% at 50% 42%, rgba(0,242,254,0.2), rgba(7,11,20,0) 60%), radial-gradient(48% 40% at 52% 54%, rgba(123,47,255,0.16), rgba(7,11,20,0) 72%)',
           opacity: bgPulse
         }}
       />
