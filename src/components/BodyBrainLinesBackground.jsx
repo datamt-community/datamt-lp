@@ -31,6 +31,8 @@ const NODES = [
 const COLORS = ['#00F2FE', '#2D6BFF', '#7B2FFF', '#9B30FF']
 
 function PathReveal({ progress, d, color, width, start, end }) {
+  const lineProgress = useTransform(progress, [start, end], [0, 1], { clamp: true })
+
   return (
     <motion.path
       d={d}
@@ -39,8 +41,8 @@ function PathReveal({ progress, d, color, width, start, end }) {
       strokeWidth={width}
       strokeLinecap="round"
       style={{
-        pathLength: useTransform(progress, [start, end], [0, 1]),
-        opacity: useTransform(progress, [start, start + 0.01, end], [0, 0.62, 0.85])
+        pathLength: lineProgress,
+        opacity: useTransform(lineProgress, [0, 0.02, 1], [0, 0.62, 0.85])
       }}
       filter="url(#globalGlow)"
     />
@@ -85,9 +87,12 @@ export default function BodyBrainLinesBackground({ progress }) {
         </defs>
 
         {BACKGROUND_PATHS.map((d, i) => {
-          const total = BACKGROUND_PATHS.length - 1
-          const start = (i / total) * 0.92
-          const end = i === total ? 1 : Math.min(1, start + 0.045)
+          const count = BACKGROUND_PATHS.length
+          const timelineStart = 0.02
+          const timelineEnd = 0.98
+          const slot = (timelineEnd - timelineStart) / count
+          const start = timelineStart + i * slot
+          const end = Math.min(1, start + slot)
 
           return (
             <PathReveal
