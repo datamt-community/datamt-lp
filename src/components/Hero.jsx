@@ -222,7 +222,7 @@ export default function Hero({ hero, progress }) {
               <a
                 key={cta.href}
                 href={cta.href}
-                className="px-8 py-3.5 rounded-xl font-semibold border border-datamt-border text-white hover:border-datamt-cyan hover:text-datamt-cyan transition-all duration-200"
+                className="px-8 py-3.5 rounded-xl font-semibold border border-datamt-border bg-black/35 text-white hover:border-datamt-cyan hover:text-datamt-cyan hover:bg-black/45 transition-all duration-200"
               >
                 {cta.label}
               </a>
@@ -234,7 +234,7 @@ export default function Hero({ hero, progress }) {
 
       <motion.div
         aria-hidden="true"
-        className="absolute bottom-4 left-1/2 z-20 h-36 w-36 -translate-x-1/2 md:bottom-7 md:h-44 md:w-44"
+        className="absolute bottom-4 left-1/2 z-0 h-48 w-48 -translate-x-1/2 md:bottom-7 md:h-56 md:w-56"
         style={{ opacity: logoOpacity }}
       >
         <DatamtSymbolRingProgress progress={scrollYProgress} className="h-full w-full" />

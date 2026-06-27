@@ -65,7 +65,7 @@ function NodeReveal({ progress, node, at, color, radius }) {
   )
 }
 
-export default function GlobalBrainLinesBackground({ progress }) {
+export default function BodyBrainLinesBackground({ progress }) {
   return (
     <div aria-hidden="true" className="pointer-events-none fixed inset-0 z-0 overflow-hidden">
       <motion.svg

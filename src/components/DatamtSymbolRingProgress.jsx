@@ -47,7 +47,7 @@ export default function DatamtSymbolRingProgress({ progress, className = '' }) {
 
       <svg
         aria-hidden="true"
-        viewBox="0 0 400 400"
+        viewBox="50 50 300 300"
         className="pointer-events-none absolute inset-0 h-full w-full"
         preserveAspectRatio="xMidYMid meet"
       >
