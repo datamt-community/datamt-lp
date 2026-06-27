@@ -75,8 +75,8 @@
     {
       "id": 1,
       "titulo": "Meetup DATA MT #1",
-      "data": "2025-08-15",
-      "dataFormatada": "15 Ago 2025",
+      "data": "2026-08-15",
+      "dataFormatada": "15 Ago 2026",
       "descricao": "Primeiro meetup oficial da DATA MT. Palestras sobre Data Engineering e AI no ecossistema de dados de MT.",
       "local": "Cuiabá, MT",
       "tags": ["Presencial", "Gratuito"],
@@ -86,8 +86,8 @@
     {
       "id": 2,
       "titulo": "Workshop: Introdução ao Microsoft Fabric",
-      "data": "2025-09-10",
-      "dataFormatada": "10 Set 2025",
+      "data": "2026-09-10",
+      "dataFormatada": "10 Set 2026",
       "descricao": "Hands-on com Microsoft Fabric: lakehouse, pipelines e Power BI integrado.",
       "local": "Online",
       "tags": ["Online", "Gratuito", "Hands-on"],
@@ -97,11 +97,33 @@
     {
       "id": 3,
       "titulo": "DATA MT Summit 2025",
-      "data": "2025-11-22",
-      "dataFormatada": "22 Nov 2025",
+      "data": "2026-11-22",
+      "dataFormatada": "22 Nov 2026",
       "descricao": "Evento anual da comunidade com palestras nacionais, workshops e networking.",
       "local": "Cuiabá, MT",
       "tags": ["Presencial", "Gratuito", "Anual"],
+      "linkInscricao": "#",
+      "imagens": []
+    },
+    {
+      "id": 4,
+      "titulo": "Bootcamp DATA MT: Engenharia de Dados na Prática",
+      "data": "2027-02-12",
+      "dataFormatada": "12 Fev 2027",
+      "descricao": "Imersão de um dia com trilha prática em ingestão, transformação e qualidade de dados com foco em projetos reais.",
+      "local": "Cuiabá, MT",
+      "tags": ["Presencial", "Bootcamp", "Hands-on"],
+      "linkInscricao": "#",
+      "imagens": []
+    },
+    {
+      "id": 5,
+      "titulo": "DATA MT Talks: IA Aplicada a Negócios",
+      "data": "2027-04-08",
+      "dataFormatada": "08 Abr 2027",
+      "descricao": "Noite de talks rápidas sobre agentes, copilots e casos reais de IA aplicada em empresas de Mato Grosso.",
+      "local": "Online",
+      "tags": ["Online", "Talks", "Gratuito"],
       "linkInscricao": "#",
       "imagens": []
     }
@@ -116,7 +138,9 @@
       "descricao": "Primeiro encontro da comunidade ainda como SQLMT. Reunimos profissionais de dados de Cuiabá para discutir o ecossistema local.",
       "local": "Cuiabá, MT",
       "tags": ["Presencial", "Gratuito"],
-      "fotos": []
+      "fotos": [
+        "/assets/radar_bsb.jpg"
+      ]
     },
     {
       "id": 2,
@@ -126,7 +150,10 @@
       "descricao": "Workshop prático de Power BI para iniciantes. Mais de 40 participantes aprenderam a criar dashboards do zero.",
       "local": "Online",
       "tags": ["Online", "Gratuito", "Workshop"],
-      "fotos": []
+      "fotos": [
+        "/assets/radar_bsb.jpg",
+        "/assets/radar_bsb.jpg"
+      ]
     },
     {
       "id": 3,
@@ -136,7 +163,101 @@
       "descricao": "Meetup especial que marcou a transição da comunidade de SQLMT para DATA MT, refletindo nossa expansão além do SQL.",
       "local": "Cuiabá, MT",
       "tags": ["Presencial", "Gratuito", "Marco"],
-      "fotos": []
+      "fotos": [
+        "/assets/radar_bsb.jpg",
+        "/assets/radar_bsb.jpg",
+        "/assets/radar_bsb.jpg"
+      ]
+    },
+    {
+      "id": 4,
+      "titulo": "Data Career Night MT",
+      "data": "2024-08-29",
+      "dataFormatada": "29 Ago 2024",
+      "descricao": "Painel sobre transição de carreira para dados com profissionais de engenharia, BI e ciência de dados.",
+      "local": "Cuiabá, MT",
+      "tags": ["Presencial", "Carreira"],
+      "fotos": [
+        "/assets/radar_bsb.jpg"
+      ]
+    },
+    {
+      "id": 5,
+      "titulo": "Hands-on: Python para Dados",
+      "data": "2024-10-12",
+      "dataFormatada": "12 Out 2024",
+      "descricao": "Sessão prática com pandas, visualização e análise exploratória para resolver problemas reais de negócio.",
+      "local": "Online",
+      "tags": ["Online", "Hands-on", "Python"],
+      "fotos": [
+        "/assets/radar_bsb.jpg",
+        "/assets/radar_bsb.jpg"
+      ]
+    },
+    {
+      "id": 6,
+      "titulo": "Mesa Redonda: Governança e LGPD em Dados",
+      "data": "2024-11-21",
+      "dataFormatada": "21 Nov 2024",
+      "descricao": "Discussão com especialistas sobre segurança, privacidade e maturidade de governança em times de dados.",
+      "local": "Cuiabá, MT",
+      "tags": ["Presencial", "Governança", "LGPD"],
+      "fotos": [
+        "/assets/radar_bsb.jpg",
+        "/assets/radar_bsb.jpg",
+        "/assets/radar_bsb.jpg"
+      ]
+    },
+    {
+      "id": 7,
+      "titulo": "Community Day DATA MT",
+      "data": "2025-01-25",
+      "dataFormatada": "25 Jan 2025",
+      "descricao": "Encontro comunitário com lightning talks, networking e apresentação de projetos locais de dados.",
+      "local": "Cuiabá, MT",
+      "tags": ["Presencial", "Comunidade"],
+      "fotos": [
+        "/assets/radar_bsb.jpg"
+      ]
+    },
+    {
+      "id": 8,
+      "titulo": "Workshop: Construindo Pipelines com dbt",
+      "data": "2025-03-14",
+      "dataFormatada": "14 Mar 2025",
+      "descricao": "Workshop técnico sobre modelagem analítica, testes e documentação de dados com dbt.",
+      "local": "Online",
+      "tags": ["Online", "Workshop", "Data Engineering"],
+      "fotos": [
+        "/assets/radar_bsb.jpg",
+        "/assets/radar_bsb.jpg"
+      ]
+    },
+    {
+      "id": 9,
+      "titulo": "Painel: Mulheres em Dados MT",
+      "data": "2025-05-09",
+      "dataFormatada": "09 Mai 2025",
+      "descricao": "Conversa com lideranças femininas da área de dados sobre trajetória, desafios e oportunidades na região.",
+      "local": "Cuiabá, MT",
+      "tags": ["Presencial", "Diversidade", "Painel"],
+      "fotos": [
+        "/assets/radar_bsb.jpg",
+        "/assets/radar_bsb.jpg",
+        "/assets/radar_bsb.jpg"
+      ]
+    },
+    {
+      "id": 10,
+      "titulo": "DataOps Meetup: Observabilidade e Qualidade",
+      "data": "2025-07-18",
+      "dataFormatada": "18 Jul 2025",
+      "descricao": "Sessão técnica sobre monitoramento de pipelines, SLAs de dados e práticas para reduzir incidentes.",
+      "local": "Cuiabá, MT",
+      "tags": ["Presencial", "DataOps", "Qualidade"],
+      "fotos": [
+        "/assets/radar_bsb.jpg"
+      ]
     }
   ],
 
