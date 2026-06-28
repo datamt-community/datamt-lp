@@ -296,8 +296,8 @@
 
   "social": [
     { "rede": "linkedin",  "url": "#", "icone": "linkedin" },
-    { "rede": "github",    "url": "#", "icone": "github" },
+    { "rede": "github",    "url": "https://github.com/datamt-community", "icone": "github" },
     { "rede": "youtube",   "url": "#", "icone": "youtube" },
-    { "rede": "instagram", "url": "#", "icone": "instagram" }
+    { "rede": "instagram", "url": "https://www.instagram.com/sql_mt/", "icone": "instagram" }
   ]
 }
