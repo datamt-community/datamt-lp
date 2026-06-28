@@ -10,8 +10,10 @@ import Organizadores from './components/Organizadores'
 import Parceiros from './components/Parceiros'
 import Footer from './components/Footer'
 import BodyBrainLinesBackground from './components/BodyBrainLinesBackground'
+import useIsMobile from './hooks/useIsMobile'
 
 function MainContent() {
+  const isMobile = useIsMobile()
   const heroStageRef = useRef(null)
   const postHeroRef = useRef(null)
   const { scrollYProgress: heroStageProgress } = useScroll({
@@ -34,17 +36,18 @@ function MainContent() {
       return heroPhase * 0.25 + postPhase * 0.75
     }
   )
+  const backgroundProgress = useTransform(bodyProgress, [0, 1], [0, isMobile ? 0.55 : 1])
 
   return (
     <div className="bg-datamt-bg min-h-screen relative isolate">
       <div className="fixed inset-0 z-0 pointer-events-none">
-        <BodyBrainLinesBackground progress={bodyProgress} />
+        <BodyBrainLinesBackground progress={backgroundProgress} />
       </div>
 
       <div className="relative z-10">
         <Navbar nav={data.nav} site={data.site} />
 
-        <div ref={heroStageRef} className="relative h-[280vh] md:h-[320vh]">
+        <div ref={heroStageRef} className={isMobile ? 'relative h-[170vh]' : 'relative h-[280vh] md:h-[320vh]'}>
           <div className="sticky top-0 h-screen">
             <Hero hero={data.hero} progress={heroStageProgress} />
           </div>
