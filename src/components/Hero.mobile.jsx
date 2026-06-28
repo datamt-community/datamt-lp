@@ -1,4 +1,5 @@
 import { motion, useScroll, useTransform } from 'framer-motion'
+import assetUrl from '../assetUrl'
 
 export default function HeroMobile({ hero, progress }) {
   const { scrollYProgress: pageScrollYProgress } = useScroll()
@@ -79,7 +80,7 @@ export default function HeroMobile({ hero, progress }) {
         </div>
 
         <div className="mx-auto h-28 w-28 opacity-90">
-          <img src="/assets/datamt-simbolo.svg" alt="DATA MT símbolo" className="h-full w-full" loading="lazy" />
+          <img src={assetUrl('/assets/datamt-simbolo.svg')} alt="DATA MT símbolo" className="h-full w-full" loading="lazy" />
         </div>
       </motion.div>
     </section>
