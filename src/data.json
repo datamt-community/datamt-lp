@@ -268,15 +268,17 @@
       "cargo": "Fundador & AI Engineer",
       "foto": "/assets/organizador_aislan_honorato.jpg",
       "linkedin": "#",
-      "github": "#"
+      "github": "#",
+      "instagram": "#"
     },
     {
       "id": 2,
       "nome": "Lucas Stolpe",
       "cargo": "Data Engineer Lead",
       "foto": "/assets/organizador_lucas_stolpe.png",
-      "linkedin": "#",
-      "github": "#"
+      "linkedin": "https://www.linkedin.com/in/lucas-henrique-s-a498b3a1/",
+      "github": "https://github.com/stolpe22",
+      "instagram": "https://www.instagram.com/stolpe0/"
     },
     {
       "id": 3,
@@ -284,7 +286,8 @@
       "cargo": "Analytics & BI Lead",
       "foto": "",
       "linkedin": "#",
-      "github": "#"
+      "github": "#",
+      "instagram": "#"
     }
   ],
 

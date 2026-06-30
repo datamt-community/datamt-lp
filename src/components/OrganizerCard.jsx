@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { AtSign, Link } from 'lucide-react'
+import { Briefcase, Link, Camera } from 'lucide-react'
 import assetUrl from '../assetUrl'
 
 function iniciais(nome) {
@@ -51,7 +51,7 @@ export default function OrganizerCard({ org, index }) {
             className="text-datamt-muted hover:text-datamt-cyan transition-colors"
             aria-label="LinkedIn"
           >
-            <AtSign size={18} />
+            <Briefcase size={18} />
           </a>
         )}
         {org.github && (
@@ -63,6 +63,17 @@ export default function OrganizerCard({ org, index }) {
             aria-label="GitHub"
           >
             <Link size={18} />
+          </a>
+        )}
+        {org.instagram && (
+          <a
+            href={org.instagram}
+            target="_blank"
+            rel="noreferrer"
+            className="text-datamt-muted hover:text-datamt-cyan transition-colors"
+            aria-label="Instagram"
+          >
+            <Camera size={18} />
           </a>
         )}
       </div>

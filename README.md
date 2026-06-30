@@ -37,10 +37,17 @@ datamt_lp/
 │       ├── datamt-simbolo-linhas.svg
 │       ├── datamt-simbolo-explicado.svg
 │       ├── datamt-logo-completa.svg
+│       ├── datamt-logo-titulo.svg           # símbolo + título sem slogan (footer)
 │       ├── logo_completa_com_fundo.svg
+│       ├── datamt-titulo.svg
+│       ├── datamt-slogan.svg
+│       ├── datamt-tipografia.svg
+│       ├── datamt-anel-segmentos.svg
 │       ├── datamt-cerebro.svg
 │       ├── datamt-cerebro-animacao.svg
-│       ├── img1.jpg / img2.jpg / img3.webp   # fotos de eventos passados
+│       ├── img1.jpg / img2.jpg / img3.webp  # fotos de eventos passados
+│       ├── organizador_aislan_honorato.jpg
+│       ├── organizador_lucas_stolpe.png
 │       ├── Astronomer-Logo.png
 │       ├── Databricks-Logo.png
 │       └── Microsoft-Logo.png
@@ -48,12 +55,20 @@ datamt_lp/
 │   ├── App.jsx              # raiz: intro + layout principal
 │   ├── data.json            # fonte única de conteúdo (ver abaixo)
 │   ├── main.jsx             # entry point React
+│   ├── assetUrl.js          # helper para caminhos de assets com base path correto
+│   ├── hooks/
+│   │   └── useIsMobile.jsx  # detecta viewport mobile para renderização condicional
 │   └── components/
 │       ├── Navbar.jsx
-│       ├── Hero.jsx
+│       ├── Hero.jsx                 # switch mobile/desktop
+│       ├── Hero.desktop.jsx
+│       ├── Hero.mobile.jsx
 │       ├── LogoIntro.jsx            # animação de entrada com a logo
 │       ├── Pilares.jsx / PilarCard.jsx
-│       ├── Eventos.jsx / EventoCard.jsx
+│       ├── Eventos.jsx              # switch mobile/desktop
+│       ├── Eventos.desktop.jsx
+│       ├── Eventos.mobile.jsx
+│       ├── EventoCard.jsx
 │       ├── Organizadores.jsx / OrganizerCard.jsx
 │       ├── Parceiros.jsx
 │       ├── Footer.jsx
@@ -62,7 +77,7 @@ datamt_lp/
 │       ├── BrainSvgProgress.jsx
 │       └── DatamtSymbolRingProgress.jsx
 ├── tailwind.config.js
-├── vite.config.js / vite.config.ts
+├── vite.config.js
 └── package.json
 ```
 
@@ -227,10 +242,21 @@ Links de redes sociais exibidos no footer.
 | `datamt-simbolo.svg` | Símbolo principal — círculo preenchido com gradiente e máscara neural |
 | `datamt-simbolo-linhas.svg` | Alternativa desenhada — traços coloridos sem preenchimento |
 | `datamt-simbolo-explicado.svg` | Versão anotada com callouts explicando cada elemento |
-| `datamt-logo-completa.svg` | Logo completa (símbolo + tipografia), fundo transparente |
+| `datamt-anel-segmentos.svg` | Anel isolado com os 7 segmentos coloridos |
+| `datamt-logo-completa.svg` | Logo completa (símbolo + tipografia + slogan), fundo transparente |
+| `datamt-logo-titulo.svg` | Logo sem slogan — símbolo + "DATA MT" (usada no footer) |
 | `logo_completa_com_fundo.svg` | Logo completa com fundo escuro `#070B14` |
+| `datamt-titulo.svg` | Tipografia "DATA MT" isolada |
+| `datamt-slogan.svg` | Tipografia do slogan isolada |
+| `datamt-tipografia.svg` | Conjunto tipográfico completo |
 | `datamt-cerebro.svg` | Somente o cérebro neural, estilo linhas com gradiente |
 | `datamt-cerebro-animacao.svg` | Cérebro com estilo alternativo para uso em animações |
+
+## Deploy — GitHub Pages
+
+O projeto é publicado automaticamente em [`https://datamt-community.github.io/datamt-lp/`](https://datamt-community.github.io/datamt-lp/) via GitHub Actions a cada push na branch `main`.
+
+O `vite.config.js` define `base: '/datamt-lp/'` para que todos os assets sejam resolvidos corretamente no subpath do GitHub Pages. Internamente, o helper `src/assetUrl.js` usa `import.meta.env.BASE_URL` para prefixar caminhos de assets em runtime — necessário porque Vite não reescreve strings hardcoded em JSX.
 
 ## Contribuindo
 
