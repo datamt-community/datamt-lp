@@ -264,17 +264,17 @@
   "organizadores": [
     {
       "id": 1,
-      "nome": "Nome Organizador",
-      "cargo": "Fundador & Data Engineer",
-      "foto": "",
+      "nome": "Aislan Honorato",
+      "cargo": "Fundador & AI Engineer",
+      "foto": "/assets/organizador_aislan_honorato.jpg",
       "linkedin": "#",
       "github": "#"
     },
     {
       "id": 2,
-      "nome": "Nome Organizador",
-      "cargo": "Co-fundador & AI Engineer",
-      "foto": "",
+      "nome": "Lucas Stolpe",
+      "cargo": "Data Engineer Lead",
+      "foto": "/assets/organizador_lucas_stolpe.png",
       "linkedin": "#",
       "github": "#"
     },
